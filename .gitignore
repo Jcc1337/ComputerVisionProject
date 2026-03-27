@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+*.so
+*.egg-info/
+.venv/
+venv/
+ENV/
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Checkpoints / model weights (keep out of git)
+*.pth
+*.pt
+*.ckpt
+
+# Semantic segmentation artifacts (generated outputs)
+semseg/exp/
+semseg/initmodel/
+
+# Build artifacts from custom ops (if generated)
+**/build/
+**/*.o
+**/*.obj
+**/*.pyd
+**/*.dll
+**/*.so
+**/*.dylib
