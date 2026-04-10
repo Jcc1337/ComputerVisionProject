@@ -7,6 +7,7 @@ __pycache__/
 .venv/
 venv/
 ENV/
+semseg/dataset
 
 # OS / Editor
 .DS_Store
@@ -30,3 +31,6 @@ semseg/initmodel/
 **/*.dll
 **/*.so
 **/*.dylib
+exp/cityscapes/deeplabv3/model/train-*.log
+exp/voc2012/deeplabv3/model/train-*.log
+util/backdoor/__pycache__/*
