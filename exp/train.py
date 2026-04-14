@@ -16,10 +16,7 @@ import torch.utils.data
 import torch.multiprocessing as mp
 import torch.distributed as dist
 
-try:
-    import apex
-except ImportError:
-    apex = None
+import apex
 from tensorboardX import SummaryWriter
 
 from util.backdoor import backdoor_modular as backdoor

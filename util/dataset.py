@@ -20,15 +20,15 @@ def make_dataset(split=None, data_root=None, data_list_file=None):
         if split == 'test':
             if len(line_split) != 1:
                 raise (RuntimeError("Image list file read line error : " + line + "\n"))
-            image_name = os.path.join(data_root, line_split[0])
+            image_name = os.path.normpath(os.path.join(data_root, line_split[0].replace('/', os.sep)))
             label_name = image_name
 
         else:
             if len(line_split) != 2:
                 raise (RuntimeError("Image list file read line error : " + line + "\n"))
-            image_name = os.path.join(data_root, line_split[0])
+            image_name = os.path.normpath(os.path.join(data_root, line_split[0].replace('/', os.sep)))
             # label_name = image_name
-            label_name = os.path.join(data_root, line_split[1])
+            label_name = os.path.normpath(os.path.join(data_root, line_split[1].replace('/', os.sep)))
 
         item = (image_name, label_name)
         image_label_list.append(item)
@@ -63,8 +63,8 @@ class SemData(Dataset):
 
     def __getitem__(self, index):
         image_path, label_path = self.data_list[index]
-        image_name = image_path.split('/')[-1].split('.')[0]
-        label_name = label_path.split('/')[-1].split('.')[0]
+        image_name = os.path.splitext(os.path.basename(image_path))[0]
+        label_name = os.path.splitext(os.path.basename(label_path))[0]
 
         if (image_path, label_path) in self.poison_list:
             image, label = self._load_poisoned_data(image_name, label_name)

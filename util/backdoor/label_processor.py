@@ -23,7 +23,7 @@ class LabelProcessor:
         self.prl = prl
         
     def get_clean_label(self, label_path):
-        label_name = label_path.split('/')[-1].split('.')[0]
+        label_name = os.path.splitext(os.path.basename(label_path))[0]
         label = cv2.imread(label_path, cv2.IMREAD_GRAYSCALE)
         if self.scale != 1:
             label = cv2.resize(label, (int(label.shape[1] * self.scale), \
@@ -49,7 +49,7 @@ class LabelProcessor:
     def get_poisoned_label(self, label, label_path):
         poisoned_label = copy.deepcopy(label)
         poisoned_label[label == self.victim_class] = self.target_class
-        poisoned_label_name = label_path.split('/')[-1].split('.')[0]
+        poisoned_label_name = os.path.splitext(os.path.basename(label_path))[0]
         poisoned_label_path = os.path.join(self.poisoned_label_folder, poisoned_label_name + '.pkl')
         return poisoned_label, poisoned_label_path
 

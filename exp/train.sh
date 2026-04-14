@@ -1,9 +1,10 @@
 #!/bin/sh
 
 export PYTHONPATH=./
-#eval "$(conda shell.bash hook)"
-#conda activate base
-PYTHON="/c/Users/morte/AppData/Local/Programs/Python/Python38/python.exe"
+eval "$(conda shell.bash hook)"
+conda activate base
+PYTHON="C:\Users\morte\AppData\Local\Programs\Python\Python38-32\python.exe"
+
 dataset=$1
 exp_name=$2
 exp_dir=exp/${dataset}/${exp_name}

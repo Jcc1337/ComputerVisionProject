@@ -17,44 +17,45 @@ class InfluencerAttack:
         self.label_processor = label_processor
         self.injection_mask_dict = None
         self.injection_center_dict = None
+        self.device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
     def get_class_area(self, class_index, label):
-        class_area = copy.deepcopy(label).to(0)
+        class_area = copy.deepcopy(label).to(self.device)
         class_area[label == class_index] = 1
         class_area[label != class_index] = 0
         return class_area
 
     def create_horizontal_mask(self, padding_type, base, height, steps):
-        mask_horizontal = base.clone().detach().to(0).float()
+        mask_horizontal = base.clone().detach().to(self.device).float()
         if padding_type == 'one':
-            padding_value = torch.ones(height, 1).to(0)
+            padding_value = torch.ones(height, 1).to(self.device)
         else:
-            padding_value = torch.zeros(height, 1).to(0)
+            padding_value = torch.zeros(height, 1).to(self.device)
         for step in range(1, steps + 1):
             col_padding = padding_value.repeat(1, step)
-            mask_left = torch.column_stack((base.clone().detach()[:, step:].to(0), col_padding))
-            mask_right = torch.column_stack((col_padding, base.clone().detach()[:, :-step].to(0)))
+            mask_left = torch.column_stack((base.clone().detach()[:, step:].to(self.device), col_padding))
+            mask_right = torch.column_stack((col_padding, base.clone().detach()[:, :-step].to(self.device)))
             mask_tmp = mask_left * mask_right 
             mask_horizontal *= mask_tmp
         return mask_horizontal
     
     def create_vertical_mask(self, padding_type, base, width, steps):
-        mask_vertical = base.clone().detach().to(0).float()
+        mask_vertical = base.clone().detach().to(self.device).float()
         if padding_type == 'one':
-            padding_value = torch.ones(1, width).to(0)
+            padding_value = torch.ones(1, width).to(self.device)
         else:
-            padding_value = torch.zeros(1, width).to(0)
+            padding_value = torch.zeros(1, width).to(self.device)
         for step in range(1, steps + 1):
             row_padding = padding_value.repeat(step, 1)
-            mask_up = torch.vstack((base.clone().detach()[step:, :].to(0), row_padding))
-            mask_down = torch.vstack((row_padding, base.clone().detach()[:-step, :].to(0)))
+            mask_up = torch.vstack((base.clone().detach()[step:, :].to(self.device), row_padding))
+            mask_down = torch.vstack((row_padding, base.clone().detach()[:-step, :].to(self.device)))
             mask_tmp = mask_up * mask_down
             mask_vertical *= mask_tmp
         return mask_vertical
         
     def get_boundary_mask(self, label, height, width): # Excludes Adjacent Areas
         tmp_label = torch.from_numpy(copy.deepcopy(label))
-        boundary_list = torch.empty((2, 0), dtype=torch.int).to(0)
+        boundary_list = torch.empty((2, 0), dtype=torch.int).to(self.device)
         tmp_steps = int((self.trigger_size - 1) / 2)
         steps = min(tmp_steps, height, width)
         for i in range(0, self.num_classes):
@@ -71,12 +72,12 @@ class InfluencerAttack:
                     tmp_list = (boundary_vertical == 1).nonzero(as_tuple=False).T
                     if tmp_list.numel() > 0:
                         boundary_list = torch.cat((boundary_list, tmp_list), dim=-1)
-        boundary_mask = torch.zeros((height, width)).to(0)
+        boundary_mask = torch.zeros((height, width)).to(self.device)
         boundary_mask[tuple(boundary_list)] = 1
         return boundary_mask   
     
     def get_neighbor_mask(self, label, height, width): # Selects Suitable Area Around Victim Class
-        tmp_label = torch.from_numpy(copy.deepcopy(label)).to(0)
+        tmp_label = torch.from_numpy(copy.deepcopy(label)).to(self.device)
         '''
         When applying neightest neighbor injection strategy, the base mask is the victim class area with 
         value 0 indicating the victim class object and 1 indicating the others objects and background, we
@@ -84,7 +85,7 @@ class InfluencerAttack:
         therefore we use one-padding   
         '''
         if self.upper_dist != 0:
-            victim_area = torch.ones((height,width)).to(0) - self.get_class_area(self.victim_class, tmp_label)
+            victim_area = torch.ones((height,width)).to(self.device) - self.get_class_area(self.victim_class, tmp_label)
             lower_bound = min(self.lower_dist, height, width)
             upper_bound = min(self.upper_dist, height, width)
 
@@ -96,9 +97,9 @@ class InfluencerAttack:
             upper_bound_vertical = self.create_vertical_mask('one', upper_bound_horizontal, width, upper_bound)
             victim_list_2 = (upper_bound_vertical == 0).nonzero(as_tuple=True)
             
-            victim_map_1 = torch.ones((height, width)).to(0)
+            victim_map_1 = torch.ones((height, width)).to(self.device)
             victim_map_1[tuple(victim_list_1)] = 0
-            victim_map_2 = torch.zeros((height, width)).to(0)
+            victim_map_2 = torch.zeros((height, width)).to(self.device)
             victim_map_2[tuple(victim_list_2)] = 1
             neighbor_mask = victim_map_1 * victim_map_2
         return neighbor_mask

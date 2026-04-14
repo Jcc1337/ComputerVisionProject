@@ -21,6 +21,7 @@ Thumbs.db
 # Semantic segmentation artifacts (generated outputs)
 semseg/exp/
 semseg/initmodel/
+dataset/
 
 # Build artifacts from custom ops (if generated)
 **/build/
@@ -30,3 +31,5 @@ semseg/initmodel/
 **/*.dll
 **/*.so
 **/*.dylib
+exp/model/train-*.log
+exp/voc2012/deeplabv3/model/train-*.log
