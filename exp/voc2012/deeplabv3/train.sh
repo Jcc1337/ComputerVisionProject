@@ -2,7 +2,7 @@
 
 export PYTHONPATH=./
 eval "$(conda shell.bash hook)"
-conda activate computervision
+conda activate Computervision28
 PYTHON=python
 
 dataset=$1

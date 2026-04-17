@@ -16,7 +16,7 @@ import torch.utils.data
 import torch.multiprocessing as mp
 import torch.distributed as dist
 
-#import apex
+import apex
 from tensorboardX import SummaryWriter
 
 from util.backdoor import backdoor_modular as backdoor

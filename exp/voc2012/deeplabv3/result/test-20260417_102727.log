@@ -1,0 +1,1446 @@
+Totally 1449 samples in val set.
+Starting Checking image&label pair val list...
+Checking image&label pair val list done!
+Not performing IBA
+Totally 1449 samples in val set.
+Starting Checking image&label pair val list...
+Checking image&label pair val list done!
+Start performing IBA
+Start creating poisoned labels
+Creating poisoned label with index 2007_002643
+Creating poisoned label with index 2011_002575
+Creating poisoned label with index 2008_003733
+Creating poisoned label with index 2007_001717
+Creating poisoned label with index 2010_003597
+Creating poisoned label with index 2007_007007
+Creating poisoned label with index 2010_002251
+Creating poisoned label with index 2007_000629
+Creating poisoned label with index 2009_002185
+Creating poisoned label with index 2010_002929
+Creating poisoned label with index 2010_000530
+Creating poisoned label with index 2008_004687
+Creating poisoned label with index 2010_003381
+Creating poisoned label with index 2011_001619
+Creating poisoned label with index 2010_005871
+Creating poisoned label with index 2008_003874
+Creating poisoned label with index 2010_003446
+Creating poisoned label with index 2009_002649
+Creating poisoned label with index 2007_005331
+Creating poisoned label with index 2008_005738
+Creating poisoned label with index 2011_000178
+Creating poisoned label with index 2011_001447
+Creating poisoned label with index 2011_001346
+Creating poisoned label with index 2009_005217
+Creating poisoned label with index 2008_005197
+Creating poisoned label with index 2010_002682
+Creating poisoned label with index 2010_004479
+Creating poisoned label with index 2008_006722
+Creating poisoned label with index 2008_003511
+Creating poisoned label with index 2007_006373
+Creating poisoned label with index 2007_004033
+Creating poisoned label with index 2008_006254
+Creating poisoned label with index 2008_005445
+Creating poisoned label with index 2007_002565
+Creating poisoned label with index 2008_000215
+Creating poisoned label with index 2009_003576
+Creating poisoned label with index 2008_002588
+Creating poisoned label with index 2007_003106
+Creating poisoned label with index 2008_002929
+Creating poisoned label with index 2008_007219
+Creating poisoned label with index 2007_007235
+Creating poisoned label with index 2007_003621
+Creating poisoned label with index 2007_003088
+Creating poisoned label with index 2008_006526
+Creating poisoned label with index 2009_004994
+Creating poisoned label with index 2011_000780
+Creating poisoned label with index 2011_002317
+Creating poisoned label with index 2007_004722
+Creating poisoned label with index 2008_000673
+Creating poisoned label with index 2007_005173
+Creating poisoned label with index 2010_001768
+Creating poisoned label with index 2011_002515
+Creating poisoned label with index 2007_009691
+Creating poisoned label with index 2007_003530
+Creating poisoned label with index 2008_001028
+Creating poisoned label with index 2008_000763
+Creating poisoned label with index 2007_007836
+Creating poisoned label with index 2007_009320
+Creating poisoned label with index 2009_004221
+Creating poisoned label with index 2008_000795
+Creating poisoned label with index 2009_001299
+Creating poisoned label with index 2007_006698
+Creating poisoned label with index 2009_000704
+Creating poisoned label with index 2009_000074
+Creating poisoned label with index 2007_005509
+Creating poisoned label with index 2007_005600
+Creating poisoned label with index 2008_000731
+Creating poisoned label with index 2008_006108
+Creating poisoned label with index 2011_000248
+Creating poisoned label with index 2007_001594
+Creating poisoned label with index 2010_001951
+Creating poisoned label with index 2007_009331
+Creating poisoned label with index 2008_001629
+Creating poisoned label with index 2010_000666
+Creating poisoned label with index 2008_002495
+Creating poisoned label with index 2009_001215
+Creating poisoned label with index 2011_000455
+Creating poisoned label with index 2010_000738
+Creating poisoned label with index 2010_001692
+Creating poisoned label with index 2011_002200
+Creating poisoned label with index 2010_004208
+Creating poisoned label with index 2007_008256
+Creating poisoned label with index 2010_005709
+Creating poisoned label with index 2009_002382
+Creating poisoned label with index 2010_005582
+Creating poisoned label with index 2007_007849
+Creating poisoned label with index 2007_009841
+Creating poisoned label with index 2011_000435
+Creating poisoned label with index 2007_009413
+Creating poisoned label with index 2010_004697
+Creating poisoned label with index 2008_000233
+Creating poisoned label with index 2009_003003
+Creating poisoned label with index 2010_002623
+Creating poisoned label with index 2010_000256
+Creating poisoned label with index 2011_002592
+Creating poisoned label with index 2007_005759
+Creating poisoned label with index 2008_003333
+Creating poisoned label with index 2010_000559
+Creating poisoned label with index 2011_001071
+Creating poisoned label with index 2011_002322
+Creating poisoned label with index 2008_000469
+Creating poisoned label with index 2007_009655
+Creating poisoned label with index 2008_000270
+Creating poisoned label with index 2008_003546
+Creating poisoned label with index 2007_007795
+Creating poisoned label with index 2011_002343
+Creating poisoned label with index 2008_006275
+Creating poisoned label with index 2010_001313
+Creating poisoned label with index 2008_008629
+Creating poisoned label with index 2011_001714
+Creating poisoned label with index 2011_001530
+Creating poisoned label with index 2011_000843
+Creating poisoned label with index 2007_005547
+Creating poisoned label with index 2007_005845
+Creating poisoned label with index 2010_004559
+Creating poisoned label with index 2007_005114
+Creating poisoned label with index 2011_000953
+Creating poisoned label with index 2007_007195
+Creating poisoned label with index 2008_001308
+Creating poisoned label with index 2007_006117
+Creating poisoned label with index 2007_009258
+Creating poisoned label with index 2007_008596
+Creating poisoned label with index 2007_002624
+Creating poisoned label with index 2009_004801
+Creating poisoned label with index 2009_004738
+Creating poisoned label with index 2008_001491
+Creating poisoned label with index 2010_005284
+Creating poisoned label with index 2011_001060
+Creating poisoned label with index 2007_005296
+Creating poisoned label with index 2008_001249
+Creating poisoned label with index 2010_003239
+Creating poisoned label with index 2010_000038
+Creating poisoned label with index 2009_002584
+Creating poisoned label with index 2009_003494
+Creating poisoned label with index 2008_002835
+Creating poisoned label with index 2009_004848
+Creating poisoned label with index 2007_001630
+Creating poisoned label with index 2007_000999
+Creating poisoned label with index 2010_001036
+Creating poisoned label with index 2011_002641
+Creating poisoned label with index 2008_000474
+Creating poisoned label with index 2010_004472
+Creating poisoned label with index 2011_002075
+Creating poisoned label with index 2008_001895
+Creating poisoned label with index 2008_000359
+Creating poisoned label with index 2010_005626
+Creating poisoned label with index 2007_002119
+Creating poisoned label with index 2011_003240
+Creating poisoned label with index 2011_003085
+Creating poisoned label with index 2010_004432
+Creating poisoned label with index 2010_001563
+Creating poisoned label with index 2007_002823
+Creating poisoned label with index 2011_001276
+Creating poisoned label with index 2008_001076
+Creating poisoned label with index 2008_001992
+Creating poisoned label with index 2008_003379
+Creating poisoned label with index 2011_000054
+Creating poisoned label with index 2007_005608
+Creating poisoned label with index 2010_005013
+Creating poisoned label with index 2008_000992
+Creating poisoned label with index 2010_003854
+Creating poisoned label with index 2008_008362
+Creating poisoned label with index 2009_003043
+Creating poisoned label with index 2011_002110
+Creating poisoned label with index 2007_006028
+Creating poisoned label with index 2007_007748
+Creating poisoned label with index 2007_002387
+Creating poisoned label with index 2007_009684
+Creating poisoned label with index 2007_003742
+Creating poisoned label with index 2008_003034
+Creating poisoned label with index 2010_003409
+Creating poisoned label with index 2008_000661
+Creating poisoned label with index 2011_001674
+Creating poisoned label with index 2007_002378
+Creating poisoned label with index 2010_004219
+Creating poisoned label with index 2011_000234
+Creating poisoned label with index 2007_007493
+Creating poisoned label with index 2009_000421
+Creating poisoned label with index 2009_000418
+Creating poisoned label with index 2008_001074
+Creating poisoned label with index 2008_007402
+Creating poisoned label with index 2007_003373
+Creating poisoned label with index 2010_000573
+Creating poisoned label with index 2010_005046
+Creating poisoned label with index 2011_002247
+Creating poisoned label with index 2010_005991
+Creating poisoned label with index 2008_008127
+Creating poisoned label with index 2009_003065
+Creating poisoned label with index 2010_000929
+Creating poisoned label with index 2007_002728
+Creating poisoned label with index 2010_000238
+Creating poisoned label with index 2008_000573
+Creating poisoned label with index 2007_008110
+Creating poisoned label with index 2007_003134
+Creating poisoned label with index 2008_003238
+Creating poisoned label with index 2010_002902
+Creating poisoned label with index 2010_000083
+Creating poisoned label with index 2007_001586
+Creating poisoned label with index 2007_001585
+Creating poisoned label with index 2007_006171
+Creating poisoned label with index 2010_004951
+Creating poisoned label with index 2007_004281
+Creating poisoned label with index 2011_002730
+Creating poisoned label with index 2007_006076
+Creating poisoned label with index 2008_003141
+Creating poisoned label with index 2011_002124
+Creating poisoned label with index 2008_006874
+Creating poisoned label with index 2008_006408
+Creating poisoned label with index 2008_001504
+Creating poisoned label with index 2007_006560
+Creating poisoned label with index 2008_004399
+Creating poisoned label with index 2008_000662
+Creating poisoned label with index 2008_001821
+Creating poisoned label with index 2010_001206
+Creating poisoned label with index 2009_004987
+Creating poisoned label with index 2008_001404
+Creating poisoned label with index 2008_000223
+Creating poisoned label with index 2008_008469
+Creating poisoned label with index 2007_008944
+Creating poisoned label with index 2008_000213
+Creating poisoned label with index 2009_005038
+Creating poisoned label with index 2008_004140
+Creating poisoned label with index 2008_001170
+Creating poisoned label with index 2009_002732
+Creating poisoned label with index 2011_000438
+Creating poisoned label with index 2010_002546
+Creating poisoned label with index 2007_008374
+Creating poisoned label with index 2008_001874
+Creating poisoned label with index 2007_009750
+Creating poisoned label with index 2010_001246
+Creating poisoned label with index 2007_008897
+Creating poisoned label with index 2007_003188
+Creating poisoned label with index 2008_002942
+Creating poisoned label with index 2007_000862
+Creating poisoned label with index 2007_003022
+Creating poisoned label with index 2007_007810
+Creating poisoned label with index 2011_001416
+Creating poisoned label with index 2007_004538
+Creating poisoned label with index 2007_000762
+Creating poisoned label with index 2008_005089
+Creating poisoned label with index 2011_002509
+Creating poisoned label with index 2010_005118
+Creating poisoned label with index 2007_004275
+Creating poisoned label with index 2009_002317
+Creating poisoned label with index 2010_002396
+Creating poisoned label with index 2011_002578
+Creating poisoned label with index 2007_005281
+Creating poisoned label with index 2007_002426
+Creating poisoned label with index 2010_000679
+Creating poisoned label with index 2011_002358
+Creating poisoned label with index 2008_004101
+Creating poisoned label with index 2011_002498
+Creating poisoned label with index 2011_001529
+Creating poisoned label with index 2007_007651
+Creating poisoned label with index 2007_006364
+Creating poisoned label with index 2007_001284
+Creating poisoned label with index 2007_004712
+Creating poisoned label with index 2009_000309
+Creating poisoned label with index 2009_001663
+Creating poisoned label with index 2008_001283
+Creating poisoned label with index 2008_007994
+Creating poisoned label with index 2008_000700
+Creating poisoned label with index 2008_000271
+Creating poisoned label with index 2010_001966
+Creating poisoned label with index 2009_004125
+Creating poisoned label with index 2007_006444
+Creating poisoned label with index 2007_006802
+Creating poisoned label with index 2007_002824
+Creating poisoned label with index 2011_000479
+Creating poisoned label with index 2010_001367
+Creating poisoned label with index 2007_007341
+Creating poisoned label with index 2007_004392
+Creating poisoned label with index 2010_001151
+Creating poisoned label with index 2007_009687
+Creating poisoned label with index 2008_000510
+Creating poisoned label with index 2007_000799
+Creating poisoned label with index 2008_007828
+Creating poisoned label with index 2007_000847
+Creating poisoned label with index 2007_003367
+Creating poisoned label with index 2007_003020
+Creating poisoned label with index 2007_001430
+Creating poisoned label with index 2011_002675
+Creating poisoned label with index 2009_003991
+Creating poisoned label with index 2007_003611
+Creating poisoned label with index 2007_007203
+Creating poisoned label with index 2009_003895
+Creating poisoned label with index 2007_007109
+Creating poisoned label with index 2011_001794
+Creating poisoned label with index 2011_001069
+Creating poisoned label with index 2008_008221
+Creating poisoned label with index 2008_001531
+Creating poisoned label with index 2010_001734
+Creating poisoned label with index 2009_003071
+Creating poisoned label with index 2007_000129
+Creating poisoned label with index 2008_002241
+Creating poisoned label with index 2010_004337
+Creating poisoned label with index 2008_002864
+Creating poisoned label with index 2009_000727
+Creating poisoned label with index 2008_005245
+Creating poisoned label with index 2010_005606
+Creating poisoned label with index 2010_001767
+Creating poisoned label with index 2011_000809
+Creating poisoned label with index 2011_003114
+Creating poisoned label with index 2008_003076
+Creating poisoned label with index 2009_000457
+Creating poisoned label with index 2007_002539
+Creating poisoned label with index 2008_006216
+Creating poisoned label with index 2007_007996
+Creating poisoned label with index 2009_004507
+Creating poisoned label with index 2009_002346
+Creating poisoned label with index 2007_005304
+Creating poisoned label with index 2009_002238
+Creating poisoned label with index 2008_003492
+Creating poisoned label with index 2007_000346
+Creating poisoned label with index 2011_002308
+Creating poisoned label with index 2010_001699
+Creating poisoned label with index 2008_000254
+Creating poisoned label with index 2011_000503
+Creating poisoned label with index 2008_002775
+Creating poisoned label with index 2009_005078
+Creating poisoned label with index 2011_002244
+Creating poisoned label with index 2009_002239
+Creating poisoned label with index 2008_004654
+Creating poisoned label with index 2011_000888
+Creating poisoned label with index 2010_004165
+Creating poisoned label with index 2009_003269
+Creating poisoned label with index 2007_007815
+Creating poisoned label with index 2007_000783
+Creating poisoned label with index 2007_008964
+Creating poisoned label with index 2009_001768
+Creating poisoned label with index 2007_006841
+Creating poisoned label with index 2007_006864
+Creating poisoned label with index 2010_002017
+Creating poisoned label with index 2011_000051
+Creating poisoned label with index 2009_005087
+Creating poisoned label with index 2010_000174
+Creating poisoned label with index 2010_001024
+Creating poisoned label with index 2008_001013
+Creating poisoned label with index 2007_001678
+Creating poisoned label with index 2009_000149
+Creating poisoned label with index 2011_001613
+Creating poisoned label with index 2009_000825
+Creating poisoned label with index 2008_003210
+Creating poisoned label with index 2010_004815
+Creating poisoned label with index 2009_002372
+Creating poisoned label with index 2007_006647
+Creating poisoned label with index 2007_004380
+Creating poisoned label with index 2009_002042
+Creating poisoned label with index 2010_002763
+Creating poisoned label with index 2011_000874
+Creating poisoned label with index 2007_003503
+Creating poisoned label with index 2008_003330
+Creating poisoned label with index 2010_003293
+Creating poisoned label with index 2009_003849
+Creating poisoned label with index 2008_003108
+Creating poisoned label with index 2007_006866
+Creating poisoned label with index 2010_002792
+Creating poisoned label with index 2008_005338
+Creating poisoned label with index 2008_004575
+Creating poisoned label with index 2007_009654
+Creating poisoned label with index 2009_000455
+Creating poisoned label with index 2007_001526
+Creating poisoned label with index 2010_000087
+Creating poisoned label with index 2008_003856
+Creating poisoned label with index 2009_001804
+Creating poisoned label with index 2009_001687
+Creating poisoned label with index 2010_000084
+Creating poisoned label with index 2008_000630
+Creating poisoned label with index 2008_000811
+Creating poisoned label with index 2007_007498
+Creating poisoned label with index 2010_003014
+Creating poisoned label with index 2009_001854
+Creating poisoned label with index 2011_001159
+Creating poisoned label with index 2009_001718
+Creating poisoned label with index 2010_004828
+Creating poisoned label with index 2011_002002
+Creating poisoned label with index 2008_001547
+Creating poisoned label with index 2007_005107
+Creating poisoned label with index 2008_000725
+Creating poisoned label with index 2010_005245
+Creating poisoned label with index 2010_001579
+Creating poisoned label with index 2007_007414
+Creating poisoned label with index 2007_004112
+Creating poisoned label with index 2010_001908
+Creating poisoned label with index 2009_004072
+Creating poisoned label with index 2008_005399
+Creating poisoned label with index 2011_001988
+Creating poisoned label with index 2008_000666
+Creating poisoned label with index 2008_008335
+Creating poisoned label with index 2007_008708
+Creating poisoned label with index 2010_003325
+Creating poisoned label with index 2007_009084
+Creating poisoned label with index 2008_002212
+Creating poisoned label with index 2007_009251
+Creating poisoned label with index 2009_004043
+Creating poisoned label with index 2011_002623
+Creating poisoned label with index 2008_006554
+Creating poisoned label with index 2011_002997
+Creating poisoned label with index 2007_008802
+Creating poisoned label with index 2009_002651
+Creating poisoned label with index 2011_002327
+Creating poisoned label with index 2010_005252
+Creating poisoned label with index 2008_005812
+Creating poisoned label with index 2007_008430
+Creating poisoned label with index 2010_003746
+Creating poisoned label with index 2008_003461
+Creating poisoned label with index 2007_000727
+Creating poisoned label with index 2009_003323
+Creating poisoned label with index 2010_002137
+Creating poisoned label with index 2007_001311
+Creating poisoned label with index 2007_001175
+Creating poisoned label with index 2007_001423
+Creating poisoned label with index 2008_001231
+Creating poisoned label with index 2007_004121
+Creating poisoned label with index 2010_000110
+Creating poisoned label with index 2007_009068
+Creating poisoned label with index 2011_003019
+Creating poisoned label with index 2010_005166
+Creating poisoned label with index 2008_000234
+Creating poisoned label with index 2008_007392
+Creating poisoned label with index 2010_004314
+Creating poisoned label with index 2007_000323
+Creating poisoned label with index 2011_000638
+Creating poisoned label with index 2011_000585
+Creating poisoned label with index 2010_000682
+Creating poisoned label with index 2008_006341
+Creating poisoned label with index 2008_003676
+Creating poisoned label with index 2007_001408
+Creating poisoned label with index 2009_000730
+Creating poisoned label with index 2007_003711
+Creating poisoned label with index 2007_008204
+Creating poisoned label with index 2011_001161
+Creating poisoned label with index 2008_003451
+Creating poisoned label with index 2010_002161
+Creating poisoned label with index 2009_000219
+Creating poisoned label with index 2008_007737
+Creating poisoned label with index 2011_000566
+Creating poisoned label with index 2009_001433
+Creating poisoned label with index 2007_004902
+Creating poisoned label with index 2007_009756
+Creating poisoned label with index 2007_002719
+Creating poisoned label with index 2011_000618
+Creating poisoned label with index 2011_001567
+Creating poisoned label with index 2011_002532
+Creating poisoned label with index 2009_004859
+Creating poisoned label with index 2007_005354
+Start creating injection masks
+Checking path: ./semseg/dataset/VOC2012/poisonedlLabel_voc2012_val_seed_1_trigger_15_vic_15_tar_0_edge_100_lower_0_upper_60_scale_1_num_446_PRL_0/voc2012_val_seed_1_trigger_15_vic_15_tar_0_edge_100_lower_0_upper_60_scale_1_center.npy
+Start creating injection center list
+The injection center of image 2007_002643 is [101 170]
+The injection center of image 2011_002575 is [180 174]
+The injection center of image 2008_003733 is [173 271]
+The injection center of image 2007_001717 is [108 244]
+The injection center of image 2010_003597 is [244 237]
+The injection center of image 2007_007007 is [171 323]
+The injection center of image 2010_002251 is [132 100]
+The injection center of image 2007_000629 is [118 149]
+The injection center of image 2009_002185 is [102 168]
+The injection center of image 2010_002929 is [157 363]
+The injection center of image 2010_000530 is [265 119]
+The injection center of image 2008_004687 is [235 150]
+The injection center of image 2010_003381 is [115 189]
+The injection center of image 2011_001619 is [214 253]
+The injection center of image 2010_005871 is [134 392]
+The injection center of image 2008_003874 is [110 159]
+The injection center of image 2010_003446 is [264 279]
+The injection center of image 2009_002649 is [176 165]
+The injection center of image 2007_005331 is [245 170]
+The injection center of image 2008_005738 is [390 150]
+The injection center of image 2011_000178 is [255 262]
+The injection center of image 2011_001447 is [118 164]
+The injection center of image 2011_001346 is [169 342]
+The injection center of image 2009_005217 is [131 276]
+The injection center of image 2008_005197 is [105 124]
+The injection center of image 2010_002682 is [0 0]
+The injection center of image 2010_004479 is [177 118]
+The injection center of image 2008_006722 is [165 168]
+The injection center of image 2008_003511 is [112 209]
+The injection center of image 2007_006373 is [283 103]
+The injection center of image 2007_004033 is [182 147]
+The injection center of image 2008_006254 is [229 245]
+The injection center of image 2008_005445 is [322 261]
+The injection center of image 2007_002565 is [138 308]
+The injection center of image 2008_000215 is [234 161]
+The injection center of image 2009_003576 is [215 289]
+The injection center of image 2008_002588 is [229 327]
+The injection center of image 2007_003106 is [102 370]
+The injection center of image 2008_002929 is [121 256]
+The injection center of image 2008_007219 is [122 199]
+The injection center of image 2007_007235 is [103 360]
+The injection center of image 2007_003621 is [202 361]
+The injection center of image 2007_003088 is [127 272]
+The injection center of image 2008_006526 is [150 265]
+The injection center of image 2009_004994 is [110 217]
+The injection center of image 2011_000780 is [109 217]
+The injection center of image 2011_002317 is [111 183]
+The injection center of image 2007_004722 is [117 253]
+The injection center of image 2008_000673 is [100 102]
+The injection center of image 2007_005173 is [117 393]
+The injection center of image 2010_001768 is [126 378]
+The injection center of image 2011_002515 is [138 123]
+The injection center of image 2007_009691 is [100 115]
+The injection center of image 2007_003530 is [216 251]
+The injection center of image 2008_001028 is [132 359]
+The injection center of image 2008_000763 is [129 224]
+The injection center of image 2007_007836 is [153 228]
+The injection center of image 2007_009320 is [176 220]
+The injection center of image 2009_004221 is [342 238]
+The injection center of image 2008_000795 is [114 319]
+The injection center of image 2009_001299 is [126 218]
+The injection center of image 2007_006698 is [109 163]
+The injection center of image 2009_000704 is [107 182]
+The injection center of image 2009_000074 is [227 254]
+The injection center of image 2007_005509 is [233 318]
+The injection center of image 2007_005600 is [207 124]
+The injection center of image 2008_000731 is [154 219]
+The injection center of image 2008_006108 is [165 221]
+The injection center of image 2011_000248 is [229 248]
+The injection center of image 2007_001594 is [176 290]
+The injection center of image 2010_001951 is [200 346]
+The injection center of image 2007_009331 is [148 156]
+The injection center of image 2008_001629 is [270 129]
+The injection center of image 2010_000666 is [194 255]
+The injection center of image 2008_002495 is [164 247]
+The injection center of image 2009_001215 is [105 174]
+The injection center of image 2011_000455 is [212 285]
+The injection center of image 2010_000738 is [131 337]
+The injection center of image 2010_001692 is [102 271]
+The injection center of image 2011_002200 is [156 274]
+The injection center of image 2010_004208 is [190 336]
+The injection center of image 2007_008256 is [152 270]
+The injection center of image 2010_005709 is [217 128]
+The injection center of image 2009_002382 is [167 129]
+The injection center of image 2010_005582 is [378 154]
+The injection center of image 2007_007849 is [174 363]
+The injection center of image 2007_009841 is [106 105]
+The injection center of image 2011_000435 is [128 108]
+The injection center of image 2007_009413 is [381 297]
+The injection center of image 2010_004697 is [110 381]
+The injection center of image 2008_000233 is [145 356]
+The injection center of image 2009_003003 is [108 244]
+The injection center of image 2010_002623 is [111 132]
+The injection center of image 2010_000256 is [170 210]
+The injection center of image 2011_002592 is [122 313]
+The injection center of image 2007_005759 is [131 156]
+The injection center of image 2008_003333 is [176 189]
+The injection center of image 2010_000559 is [115 292]
+The injection center of image 2011_001071 is [132 190]
+The injection center of image 2011_002322 is [251 275]
+The injection center of image 2008_000469 is [161 373]
+The injection center of image 2007_009655 is [210 107]
+The injection center of image 2008_000270 is [175 338]
+The injection center of image 2008_003546 is [241 289]
+The injection center of image 2007_007795 is [139 338]
+The injection center of image 2011_002343 is [110 122]
+The injection center of image 2008_006275 is [100 385]
+The injection center of image 2010_001313 is [103 132]
+The injection center of image 2008_008629 is [100 201]
+The injection center of image 2011_001714 is [212 231]
+The injection center of image 2011_001530 is [197 356]
+The injection center of image 2011_000843 is [112 383]
+The injection center of image 2007_005547 is [109 382]
+The injection center of image 2007_005845 is [128 224]
+The injection center of image 2010_004559 is [167 358]
+The injection center of image 2007_005114 is [143 267]
+The injection center of image 2011_000953 is [159 139]
+The injection center of image 2007_007195 is [123 368]
+The injection center of image 2008_001308 is [203 388]
+The injection center of image 2007_006117 is [352 262]
+The injection center of image 2007_009258 is [276 227]
+The injection center of image 2007_008596 is [130 124]
+The injection center of image 2007_002624 is [137 307]
+The injection center of image 2009_004801 is [231 336]
+The injection center of image 2009_004738 is [179 340]
+The injection center of image 2008_001491 is [216 275]
+The injection center of image 2010_005284 is [147 136]
+The injection center of image 2011_001060 is [182 216]
+The injection center of image 2007_005296 is [248 389]
+The injection center of image 2008_001249 is [327 159]
+The injection center of image 2010_003239 is [225 206]
+The injection center of image 2010_000038 is [236 252]
+The injection center of image 2009_002584 is [344 258]
+The injection center of image 2009_003494 is [371 135]
+The injection center of image 2008_002835 is [100 147]
+The injection center of image 2009_004848 is [156 153]
+The injection center of image 2007_001630 is [167 192]
+The injection center of image 2007_000999 is [272 261]
+The injection center of image 2010_001036 is [120 276]
+The injection center of image 2011_002641 is [107 207]
+The injection center of image 2008_000474 is [208 371]
+The injection center of image 2010_004472 is [153 105]
+The injection center of image 2011_002075 is [110 390]
+The injection center of image 2008_001895 is [146 227]
+The injection center of image 2008_000359 is [110 392]
+The injection center of image 2010_005626 is [100 318]
+The injection center of image 2007_002119 is [201 289]
+The injection center of image 2011_003240 is [150 105]
+The injection center of image 2011_003085 is [127 324]
+The injection center of image 2010_004432 is [0 0]
+The injection center of image 2010_001563 is [135 211]
+The injection center of image 2007_002823 is [103 270]
+The injection center of image 2011_001276 is [359 163]
+The injection center of image 2008_001076 is [268 138]
+The injection center of image 2008_001992 is [130 247]
+The injection center of image 2008_003379 is [136 189]
+The injection center of image 2011_000054 is [178 237]
+The injection center of image 2007_005608 is [157 246]
+The injection center of image 2010_005013 is [127 173]
+The injection center of image 2008_000992 is [118 392]
+The injection center of image 2010_003854 is [109 295]
+The injection center of image 2008_008362 is [119 352]
+The injection center of image 2009_003043 is [266 265]
+The injection center of image 2011_002110 is [176 132]
+The injection center of image 2007_006028 is [188 376]
+The injection center of image 2007_007748 is [272 196]
+The injection center of image 2007_002387 is [210 148]
+The injection center of image 2007_009684 is [249 393]
+The injection center of image 2007_003742 is [217 133]
+The injection center of image 2008_003034 is [221 182]
+The injection center of image 2010_003409 is [208 329]
+The injection center of image 2008_000661 is [152 320]
+The injection center of image 2011_001674 is [184 159]
+The injection center of image 2007_002378 is [133 209]
+The injection center of image 2010_004219 is [147 359]
+The injection center of image 2011_000234 is [370 141]
+The injection center of image 2007_007493 is [133 306]
+The injection center of image 2009_000421 is [108 300]
+The injection center of image 2009_000418 is [259 291]
+The injection center of image 2008_001074 is [209 250]
+The injection center of image 2008_007402 is [183 228]
+The injection center of image 2007_003373 is [154 159]
+The injection center of image 2010_000573 is [234 278]
+The injection center of image 2010_005046 is [125 357]
+The injection center of image 2011_002247 is [126 152]
+The injection center of image 2010_005991 is [245 145]
+The injection center of image 2008_008127 is [211 394]
+The injection center of image 2009_003065 is [226 142]
+The injection center of image 2010_000929 is [260 178]
+The injection center of image 2007_002728 is [196 389]
+The injection center of image 2010_000238 is [105 316]
+The injection center of image 2008_000573 is [140 299]
+The injection center of image 2007_008110 is [343 153]
+The injection center of image 2007_003134 is [258 359]
+The injection center of image 2008_003238 is [259 126]
+The injection center of image 2010_002902 is [224 347]
+The injection center of image 2010_000083 is [206 169]
+The injection center of image 2007_001586 is [187 311]
+The injection center of image 2007_001585 is [266 332]
+The injection center of image 2007_006171 is [125 240]
+The injection center of image 2010_004951 is [112 209]
+The injection center of image 2007_004281 is [251 399]
+The injection center of image 2011_002730 is [162 306]
+The injection center of image 2007_006076 is [345 236]
+The injection center of image 2008_003141 is [156 388]
+The injection center of image 2011_002124 is [183 309]
+The injection center of image 2008_006874 is [383 252]
+The injection center of image 2008_006408 is [372 188]
+The injection center of image 2008_001504 is [346 260]
+The injection center of image 2007_006560 is [200 398]
+The injection center of image 2008_004399 is [151 369]
+The injection center of image 2008_000662 is [104 247]
+The injection center of image 2008_001821 is [250 320]
+The injection center of image 2010_001206 is [147 113]
+The injection center of image 2009_004987 is [138 273]
+The injection center of image 2008_001404 is [345 103]
+The injection center of image 2008_000223 is [129 333]
+The injection center of image 2008_008469 is [201 174]
+The injection center of image 2007_008944 is [379 321]
+The injection center of image 2008_000213 is [190 110]
+The injection center of image 2009_005038 is [157 268]
+The injection center of image 2008_004140 is [383 136]
+The injection center of image 2008_001170 is [181 171]
+The injection center of image 2009_002732 is [219 124]
+The injection center of image 2011_000438 is [105 313]
+The injection center of image 2010_002546 is [178 378]
+The injection center of image 2007_008374 is [167 212]
+The injection center of image 2008_001874 is [203 340]
+The injection center of image 2007_009750 is [164 119]
+The injection center of image 2010_001246 is [233 152]
+The injection center of image 2007_008897 is [230 394]
+The injection center of image 2007_003188 is [128 263]
+The injection center of image 2008_002942 is [326 209]
+The injection center of image 2007_000862 is [202 269]
+The injection center of image 2007_003022 is [184 333]
+The injection center of image 2007_007810 is [178 124]
+The injection center of image 2011_001416 is [250 287]
+The injection center of image 2007_004538 is [257 196]
+The injection center of image 2007_000762 is [237 216]
+The injection center of image 2008_005089 is [223 125]
+The injection center of image 2011_002509 is [185 218]
+The injection center of image 2010_005118 is [231 249]
+The injection center of image 2007_004275 is [323 111]
+The injection center of image 2009_002317 is [127 203]
+The injection center of image 2010_002396 is [176 371]
+The injection center of image 2011_002578 is [104 116]
+The injection center of image 2007_005281 is [352 124]
+The injection center of image 2007_002426 is [257 297]
+The injection center of image 2010_000679 is [149 247]
+The injection center of image 2011_002358 is [222 270]
+The injection center of image 2008_004101 is [163 109]
+The injection center of image 2011_002498 is [323 251]
+The injection center of image 2011_001529 is [148 255]
+The injection center of image 2007_007651 is [151 252]
+The injection center of image 2007_006364 is [127 266]
+The injection center of image 2007_001284 is [102 190]
+The injection center of image 2007_004712 is [255 177]
+The injection center of image 2009_000309 is [128 340]
+The injection center of image 2009_001663 is [108 122]
+The injection center of image 2008_001283 is [269 333]
+The injection center of image 2008_007994 is [153 320]
+The injection center of image 2008_000700 is [114 318]
+The injection center of image 2008_000271 is [149 317]
+The injection center of image 2010_001966 is [242 316]
+The injection center of image 2009_004125 is [210 167]
+The injection center of image 2007_006444 is [173 353]
+The injection center of image 2007_006802 is [136 360]
+The injection center of image 2007_002824 is [185 148]
+The injection center of image 2011_000479 is [103 105]
+The injection center of image 2010_001367 is [303 250]
+The injection center of image 2007_007341 is [271 244]
+The injection center of image 2007_004392 is [179 180]
+The injection center of image 2010_001151 is [236 132]
+The injection center of image 2007_009687 is [143 257]
+The injection center of image 2008_000510 is [162 306]
+The injection center of image 2007_000799 is [339 286]
+The injection center of image 2008_007828 is [261 190]
+The injection center of image 2007_000847 is [308 269]
+The injection center of image 2007_003367 is [0 0]
+The injection center of image 2007_003020 is [130 320]
+The injection center of image 2007_001430 is [142 199]
+The injection center of image 2011_002675 is [150 107]
+The injection center of image 2009_003991 is [101 174]
+The injection center of image 2007_003611 is [239 278]
+The injection center of image 2007_007203 is [265 272]
+The injection center of image 2009_003895 is [211 136]
+The injection center of image 2007_007109 is [167 161]
+The injection center of image 2011_001794 is [203 237]
+The injection center of image 2011_001069 is [222 173]
+The injection center of image 2008_008221 is [170 125]
+The injection center of image 2008_001531 is [193 373]
+The injection center of image 2010_001734 is [234 178]
+The injection center of image 2009_003071 is [188 299]
+The injection center of image 2007_000129 is [329 158]
+The injection center of image 2008_002241 is [313 233]
+The injection center of image 2010_004337 is [120 317]
+The injection center of image 2008_002864 is [182 253]
+The injection center of image 2009_000727 is [187 298]
+The injection center of image 2008_005245 is [104 114]
+The injection center of image 2010_005606 is [154 220]
+The injection center of image 2010_001767 is [157 139]
+The injection center of image 2011_000809 is [229 244]
+The injection center of image 2011_003114 is [158 269]
+The injection center of image 2008_003076 is [191 114]
+The injection center of image 2009_000457 is [105 212]
+The injection center of image 2007_002539 is [184 165]
+The injection center of image 2008_006216 is [210 287]
+The injection center of image 2007_007996 is [117 169]
+The injection center of image 2009_004507 is [223 347]
+The injection center of image 2009_002346 is [265 112]
+The injection center of image 2007_005304 is [262 333]
+The injection center of image 2009_002238 is [240 360]
+The injection center of image 2008_003492 is [116 121]
+The injection center of image 2007_000346 is [195 120]
+The injection center of image 2011_002308 is [145 257]
+The injection center of image 2010_001699 is [258 261]
+The injection center of image 2008_000254 is [260 180]
+The injection center of image 2011_000503 is [244 375]
+The injection center of image 2008_002775 is [226 104]
+The injection center of image 2009_005078 is [174 141]
+The injection center of image 2011_002244 is [121 332]
+The injection center of image 2009_002239 is [389 130]
+The injection center of image 2008_004654 is [137 221]
+The injection center of image 2011_000888 is [216 357]
+The injection center of image 2010_004165 is [193 125]
+The injection center of image 2009_003269 is [205 106]
+The injection center of image 2007_007815 is [159 196]
+The injection center of image 2007_000783 is [262 229]
+The injection center of image 2007_008964 is [213 193]
+The injection center of image 2009_001768 is [109 216]
+The injection center of image 2007_006841 is [106 337]
+The injection center of image 2007_006864 is [181 180]
+The injection center of image 2010_002017 is [127 143]
+The injection center of image 2011_000051 is [189 327]
+The injection center of image 2009_005087 is [342 268]
+The injection center of image 2010_000174 is [252 399]
+The injection center of image 2010_001024 is [196 239]
+The injection center of image 2008_001013 is [157 215]
+The injection center of image 2007_001678 is [205 264]
+The injection center of image 2009_000149 is [192 214]
+The injection center of image 2011_001613 is [221 366]
+The injection center of image 2009_000825 is [188 215]
+The injection center of image 2008_003210 is [146 244]
+The injection center of image 2010_004815 is [168 252]
+The injection center of image 2009_002372 is [201 237]
+The injection center of image 2007_006647 is [260 171]
+The injection center of image 2007_004380 is [350 152]
+The injection center of image 2009_002042 is [133 176]
+The injection center of image 2010_002763 is [101 110]
+The injection center of image 2011_000874 is [156 399]
+The injection center of image 2007_003503 is [194 112]
+The injection center of image 2008_003330 is [0 0]
+The injection center of image 2010_003293 is [134 273]
+The injection center of image 2009_003849 is [152 122]
+The injection center of image 2008_003108 is [0 0]
+The injection center of image 2007_006866 is [130 314]
+The injection center of image 2010_002792 is [120 178]
+The injection center of image 2008_005338 is [228 159]
+The injection center of image 2008_004575 is [104 179]
+The injection center of image 2007_009654 is [222 228]
+The injection center of image 2009_000455 is [192 186]
+The injection center of image 2007_001526 is [0 0]
+The injection center of image 2010_000087 is [149 391]
+The injection center of image 2008_003856 is [206 113]
+The injection center of image 2009_001804 is [126 240]
+The injection center of image 2009_001687 is [251 213]
+The injection center of image 2010_000084 is [203 159]
+The injection center of image 2008_000630 is [146 106]
+The injection center of image 2008_000811 is [156 257]
+The injection center of image 2007_007498 is [171 136]
+The injection center of image 2010_003014 is [133 236]
+The injection center of image 2009_001854 is [0 0]
+The injection center of image 2011_001159 is [199 231]
+The injection center of image 2009_001718 is [162 115]
+The injection center of image 2010_004828 is [175 368]
+The injection center of image 2011_002002 is [123 294]
+The injection center of image 2008_001547 is [193 176]
+The injection center of image 2007_005107 is [119 262]
+The injection center of image 2008_000725 is [151 105]
+The injection center of image 2010_005245 is [347 227]
+The injection center of image 2010_001579 is [273 285]
+The injection center of image 2007_007414 is [161 399]
+The injection center of image 2007_004112 is [199 140]
+The injection center of image 2010_001908 is [140 100]
+The injection center of image 2009_004072 is [146 244]
+The injection center of image 2008_005399 is [146 132]
+The injection center of image 2011_001988 is [342 261]
+The injection center of image 2008_000666 is [106 110]
+The injection center of image 2008_008335 is [398 126]
+The injection center of image 2007_008708 is [123 230]
+The injection center of image 2010_003325 is [176 216]
+The injection center of image 2007_009084 is [157 392]
+The injection center of image 2008_002212 is [185 279]
+The injection center of image 2007_009251 is [124 137]
+The injection center of image 2009_004043 is [160 363]
+The injection center of image 2011_002623 is [135 110]
+The injection center of image 2008_006554 is [247 292]
+The injection center of image 2011_002997 is [131 137]
+The injection center of image 2007_008802 is [101 194]
+The injection center of image 2009_002651 is [133 368]
+The injection center of image 2011_002327 is [208 177]
+The injection center of image 2010_005252 is [280 254]
+The injection center of image 2008_005812 is [103 141]
+The injection center of image 2007_008430 is [151 193]
+The injection center of image 2010_003746 is [149 143]
+The injection center of image 2008_003461 is [203 101]
+The injection center of image 2007_000727 is [318 262]
+The injection center of image 2009_003323 is [220 279]
+The injection center of image 2010_002137 is [255 103]
+The injection center of image 2007_001311 is [137 288]
+The injection center of image 2007_001175 is [148 274]
+The injection center of image 2007_001423 is [151 306]
+The injection center of image 2008_001231 is [127 176]
+The injection center of image 2007_004121 is [194 393]
+The injection center of image 2010_000110 is [285 167]
+The injection center of image 2007_009068 is [174 174]
+The injection center of image 2011_003019 is [202 385]
+The injection center of image 2010_005166 is [156 236]
+The injection center of image 2008_000234 is [105 343]
+The injection center of image 2008_007392 is [211 251]
+The injection center of image 2010_004314 is [263 106]
+The injection center of image 2007_000323 is [141 102]
+The injection center of image 2011_000638 is [129 324]
+The injection center of image 2011_000585 is [120 142]
+The injection center of image 2010_000682 is [124 385]
+The injection center of image 2008_006341 is [157 289]
+The injection center of image 2008_003676 is [260 365]
+The injection center of image 2007_001408 is [327 145]
+The injection center of image 2009_000730 is [222 165]
+The injection center of image 2007_003711 is [104 292]
+The injection center of image 2007_008204 is [115 272]
+The injection center of image 2011_001161 is [214 269]
+The injection center of image 2008_003451 is [180 223]
+The injection center of image 2010_002161 is [177 365]
+The injection center of image 2009_000219 is [258 310]
+The injection center of image 2008_007737 is [314 179]
+The injection center of image 2011_000566 is [202 142]
+The injection center of image 2009_001433 is [228 311]
+The injection center of image 2007_004902 is [237 232]
+The injection center of image 2007_009756 is [209 246]
+The injection center of image 2007_002719 is [100 142]
+The injection center of image 2011_000618 is [101 208]
+The injection center of image 2011_001567 is [102 140]
+The injection center of image 2011_002532 is [128 358]
+The injection center of image 2009_004859 is [263 261]
+The injection center of image 2007_005354 is [236 327]
+Start creating poisoned images
+Creating poisoned image with index 2007_002643
+Creating poisoned image with index 2011_002575
+Creating poisoned image with index 2008_003733
+Creating poisoned image with index 2007_001717
+Creating poisoned image with index 2010_003597
+Creating poisoned image with index 2007_007007
+Creating poisoned image with index 2010_002251
+Creating poisoned image with index 2007_000629
+Creating poisoned image with index 2009_002185
+Creating poisoned image with index 2010_002929
+Creating poisoned image with index 2010_000530
+Creating poisoned image with index 2008_004687
+Creating poisoned image with index 2010_003381
+Creating poisoned image with index 2011_001619
+Creating poisoned image with index 2010_005871
+Creating poisoned image with index 2008_003874
+Creating poisoned image with index 2010_003446
+Creating poisoned image with index 2009_002649
+Creating poisoned image with index 2007_005331
+Creating poisoned image with index 2008_005738
+Creating poisoned image with index 2011_000178
+Creating poisoned image with index 2011_001447
+Creating poisoned image with index 2011_001346
+Creating poisoned image with index 2009_005217
+Creating poisoned image with index 2008_005197
+Creating poisoned image with index 2010_002682
+Creating poisoned image with index 2010_004479
+Creating poisoned image with index 2008_006722
+Creating poisoned image with index 2008_003511
+Creating poisoned image with index 2007_006373
+Creating poisoned image with index 2007_004033
+Creating poisoned image with index 2008_006254
+Creating poisoned image with index 2008_005445
+Creating poisoned image with index 2007_002565
+Creating poisoned image with index 2008_000215
+Creating poisoned image with index 2009_003576
+Creating poisoned image with index 2008_002588
+Creating poisoned image with index 2007_003106
+Creating poisoned image with index 2008_002929
+Creating poisoned image with index 2008_007219
+Creating poisoned image with index 2007_007235
+Creating poisoned image with index 2007_003621
+Creating poisoned image with index 2007_003088
+Creating poisoned image with index 2008_006526
+Creating poisoned image with index 2009_004994
+Creating poisoned image with index 2011_000780
+Creating poisoned image with index 2011_002317
+Creating poisoned image with index 2007_004722
+Creating poisoned image with index 2008_000673
+Creating poisoned image with index 2007_005173
+Creating poisoned image with index 2010_001768
+Creating poisoned image with index 2011_002515
+Creating poisoned image with index 2007_009691
+Creating poisoned image with index 2007_003530
+Creating poisoned image with index 2008_001028
+Creating poisoned image with index 2008_000763
+Creating poisoned image with index 2007_007836
+Creating poisoned image with index 2007_009320
+Creating poisoned image with index 2009_004221
+Creating poisoned image with index 2008_000795
+Creating poisoned image with index 2009_001299
+Creating poisoned image with index 2007_006698
+Creating poisoned image with index 2009_000704
+Creating poisoned image with index 2009_000074
+Creating poisoned image with index 2007_005509
+Creating poisoned image with index 2007_005600
+Creating poisoned image with index 2008_000731
+Creating poisoned image with index 2008_006108
+Creating poisoned image with index 2011_000248
+Creating poisoned image with index 2007_001594
+Creating poisoned image with index 2010_001951
+Creating poisoned image with index 2007_009331
+Creating poisoned image with index 2008_001629
+Creating poisoned image with index 2010_000666
+Creating poisoned image with index 2008_002495
+Creating poisoned image with index 2009_001215
+Creating poisoned image with index 2011_000455
+Creating poisoned image with index 2010_000738
+Creating poisoned image with index 2010_001692
+Creating poisoned image with index 2011_002200
+Creating poisoned image with index 2010_004208
+Creating poisoned image with index 2007_008256
+Creating poisoned image with index 2010_005709
+Creating poisoned image with index 2009_002382
+Creating poisoned image with index 2010_005582
+Creating poisoned image with index 2007_007849
+Creating poisoned image with index 2007_009841
+Creating poisoned image with index 2011_000435
+Creating poisoned image with index 2007_009413
+Creating poisoned image with index 2010_004697
+Creating poisoned image with index 2008_000233
+Creating poisoned image with index 2009_003003
+Creating poisoned image with index 2010_002623
+Creating poisoned image with index 2010_000256
+Creating poisoned image with index 2011_002592
+Creating poisoned image with index 2007_005759
+Creating poisoned image with index 2008_003333
+Creating poisoned image with index 2010_000559
+Creating poisoned image with index 2011_001071
+Creating poisoned image with index 2011_002322
+Creating poisoned image with index 2008_000469
+Creating poisoned image with index 2007_009655
+Creating poisoned image with index 2008_000270
+Creating poisoned image with index 2008_003546
+Creating poisoned image with index 2007_007795
+Creating poisoned image with index 2011_002343
+Creating poisoned image with index 2008_006275
+Creating poisoned image with index 2010_001313
+Creating poisoned image with index 2008_008629
+Creating poisoned image with index 2011_001714
+Creating poisoned image with index 2011_001530
+Creating poisoned image with index 2011_000843
+Creating poisoned image with index 2007_005547
+Creating poisoned image with index 2007_005845
+Creating poisoned image with index 2010_004559
+Creating poisoned image with index 2007_005114
+Creating poisoned image with index 2011_000953
+Creating poisoned image with index 2007_007195
+Creating poisoned image with index 2008_001308
+Creating poisoned image with index 2007_006117
+Creating poisoned image with index 2007_009258
+Creating poisoned image with index 2007_008596
+Creating poisoned image with index 2007_002624
+Creating poisoned image with index 2009_004801
+Creating poisoned image with index 2009_004738
+Creating poisoned image with index 2008_001491
+Creating poisoned image with index 2010_005284
+Creating poisoned image with index 2011_001060
+Creating poisoned image with index 2007_005296
+Creating poisoned image with index 2008_001249
+Creating poisoned image with index 2010_003239
+Creating poisoned image with index 2010_000038
+Creating poisoned image with index 2009_002584
+Creating poisoned image with index 2009_003494
+Creating poisoned image with index 2008_002835
+Creating poisoned image with index 2009_004848
+Creating poisoned image with index 2007_001630
+Creating poisoned image with index 2007_000999
+Creating poisoned image with index 2010_001036
+Creating poisoned image with index 2011_002641
+Creating poisoned image with index 2008_000474
+Creating poisoned image with index 2010_004472
+Creating poisoned image with index 2011_002075
+Creating poisoned image with index 2008_001895
+Creating poisoned image with index 2008_000359
+Creating poisoned image with index 2010_005626
+Creating poisoned image with index 2007_002119
+Creating poisoned image with index 2011_003240
+Creating poisoned image with index 2011_003085
+Creating poisoned image with index 2010_004432
+Creating poisoned image with index 2010_001563
+Creating poisoned image with index 2007_002823
+Creating poisoned image with index 2011_001276
+Creating poisoned image with index 2008_001076
+Creating poisoned image with index 2008_001992
+Creating poisoned image with index 2008_003379
+Creating poisoned image with index 2011_000054
+Creating poisoned image with index 2007_005608
+Creating poisoned image with index 2010_005013
+Creating poisoned image with index 2008_000992
+Creating poisoned image with index 2010_003854
+Creating poisoned image with index 2008_008362
+Creating poisoned image with index 2009_003043
+Creating poisoned image with index 2011_002110
+Creating poisoned image with index 2007_006028
+Creating poisoned image with index 2007_007748
+Creating poisoned image with index 2007_002387
+Creating poisoned image with index 2007_009684
+Creating poisoned image with index 2007_003742
+Creating poisoned image with index 2008_003034
+Creating poisoned image with index 2010_003409
+Creating poisoned image with index 2008_000661
+Creating poisoned image with index 2011_001674
+Creating poisoned image with index 2007_002378
+Creating poisoned image with index 2010_004219
+Creating poisoned image with index 2011_000234
+Creating poisoned image with index 2007_007493
+Creating poisoned image with index 2009_000421
+Creating poisoned image with index 2009_000418
+Creating poisoned image with index 2008_001074
+Creating poisoned image with index 2008_007402
+Creating poisoned image with index 2007_003373
+Creating poisoned image with index 2010_000573
+Creating poisoned image with index 2010_005046
+Creating poisoned image with index 2011_002247
+Creating poisoned image with index 2010_005991
+Creating poisoned image with index 2008_008127
+Creating poisoned image with index 2009_003065
+Creating poisoned image with index 2010_000929
+Creating poisoned image with index 2007_002728
+Creating poisoned image with index 2010_000238
+Creating poisoned image with index 2008_000573
+Creating poisoned image with index 2007_008110
+Creating poisoned image with index 2007_003134
+Creating poisoned image with index 2008_003238
+Creating poisoned image with index 2010_002902
+Creating poisoned image with index 2010_000083
+Creating poisoned image with index 2007_001586
+Creating poisoned image with index 2007_001585
+Creating poisoned image with index 2007_006171
+Creating poisoned image with index 2010_004951
+Creating poisoned image with index 2007_004281
+Creating poisoned image with index 2011_002730
+Creating poisoned image with index 2007_006076
+Creating poisoned image with index 2008_003141
+Creating poisoned image with index 2011_002124
+Creating poisoned image with index 2008_006874
+Creating poisoned image with index 2008_006408
+Creating poisoned image with index 2008_001504
+Creating poisoned image with index 2007_006560
+Creating poisoned image with index 2008_004399
+Creating poisoned image with index 2008_000662
+Creating poisoned image with index 2008_001821
+Creating poisoned image with index 2010_001206
+Creating poisoned image with index 2009_004987
+Creating poisoned image with index 2008_001404
+Creating poisoned image with index 2008_000223
+Creating poisoned image with index 2008_008469
+Creating poisoned image with index 2007_008944
+Creating poisoned image with index 2008_000213
+Creating poisoned image with index 2009_005038
+Creating poisoned image with index 2008_004140
+Creating poisoned image with index 2008_001170
+Creating poisoned image with index 2009_002732
+Creating poisoned image with index 2011_000438
+Creating poisoned image with index 2010_002546
+Creating poisoned image with index 2007_008374
+Creating poisoned image with index 2008_001874
+Creating poisoned image with index 2007_009750
+Creating poisoned image with index 2010_001246
+Creating poisoned image with index 2007_008897
+Creating poisoned image with index 2007_003188
+Creating poisoned image with index 2008_002942
+Creating poisoned image with index 2007_000862
+Creating poisoned image with index 2007_003022
+Creating poisoned image with index 2007_007810
+Creating poisoned image with index 2011_001416
+Creating poisoned image with index 2007_004538
+Creating poisoned image with index 2007_000762
+Creating poisoned image with index 2008_005089
+Creating poisoned image with index 2011_002509
+Creating poisoned image with index 2010_005118
+Creating poisoned image with index 2007_004275
+Creating poisoned image with index 2009_002317
+Creating poisoned image with index 2010_002396
+Creating poisoned image with index 2011_002578
+Creating poisoned image with index 2007_005281
+Creating poisoned image with index 2007_002426
+Creating poisoned image with index 2010_000679
+Creating poisoned image with index 2011_002358
+Creating poisoned image with index 2008_004101
+Creating poisoned image with index 2011_002498
+Creating poisoned image with index 2011_001529
+Creating poisoned image with index 2007_007651
+Creating poisoned image with index 2007_006364
+Creating poisoned image with index 2007_001284
+Creating poisoned image with index 2007_004712
+Creating poisoned image with index 2009_000309
+Creating poisoned image with index 2009_001663
+Creating poisoned image with index 2008_001283
+Creating poisoned image with index 2008_007994
+Creating poisoned image with index 2008_000700
+Creating poisoned image with index 2008_000271
+Creating poisoned image with index 2010_001966
+Creating poisoned image with index 2009_004125
+Creating poisoned image with index 2007_006444
+Creating poisoned image with index 2007_006802
+Creating poisoned image with index 2007_002824
+Creating poisoned image with index 2011_000479
+Creating poisoned image with index 2010_001367
+Creating poisoned image with index 2007_007341
+Creating poisoned image with index 2007_004392
+Creating poisoned image with index 2010_001151
+Creating poisoned image with index 2007_009687
+Creating poisoned image with index 2008_000510
+Creating poisoned image with index 2007_000799
+Creating poisoned image with index 2008_007828
+Creating poisoned image with index 2007_000847
+Creating poisoned image with index 2007_003367
+Creating poisoned image with index 2007_003020
+Creating poisoned image with index 2007_001430
+Creating poisoned image with index 2011_002675
+Creating poisoned image with index 2009_003991
+Creating poisoned image with index 2007_003611
+Creating poisoned image with index 2007_007203
+Creating poisoned image with index 2009_003895
+Creating poisoned image with index 2007_007109
+Creating poisoned image with index 2011_001794
+Creating poisoned image with index 2011_001069
+Creating poisoned image with index 2008_008221
+Creating poisoned image with index 2008_001531
+Creating poisoned image with index 2010_001734
+Creating poisoned image with index 2009_003071
+Creating poisoned image with index 2007_000129
+Creating poisoned image with index 2008_002241
+Creating poisoned image with index 2010_004337
+Creating poisoned image with index 2008_002864
+Creating poisoned image with index 2009_000727
+Creating poisoned image with index 2008_005245
+Creating poisoned image with index 2010_005606
+Creating poisoned image with index 2010_001767
+Creating poisoned image with index 2011_000809
+Creating poisoned image with index 2011_003114
+Creating poisoned image with index 2008_003076
+Creating poisoned image with index 2009_000457
+Creating poisoned image with index 2007_002539
+Creating poisoned image with index 2008_006216
+Creating poisoned image with index 2007_007996
+Creating poisoned image with index 2009_004507
+Creating poisoned image with index 2009_002346
+Creating poisoned image with index 2007_005304
+Creating poisoned image with index 2009_002238
+Creating poisoned image with index 2008_003492
+Creating poisoned image with index 2007_000346
+Creating poisoned image with index 2011_002308
+Creating poisoned image with index 2010_001699
+Creating poisoned image with index 2008_000254
+Creating poisoned image with index 2011_000503
+Creating poisoned image with index 2008_002775
+Creating poisoned image with index 2009_005078
+Creating poisoned image with index 2011_002244
+Creating poisoned image with index 2009_002239
+Creating poisoned image with index 2008_004654
+Creating poisoned image with index 2011_000888
+Creating poisoned image with index 2010_004165
+Creating poisoned image with index 2009_003269
+Creating poisoned image with index 2007_007815
+Creating poisoned image with index 2007_000783
+Creating poisoned image with index 2007_008964
+Creating poisoned image with index 2009_001768
+Creating poisoned image with index 2007_006841
+Creating poisoned image with index 2007_006864
+Creating poisoned image with index 2010_002017
+Creating poisoned image with index 2011_000051
+Creating poisoned image with index 2009_005087
+Creating poisoned image with index 2010_000174
+Creating poisoned image with index 2010_001024
+Creating poisoned image with index 2008_001013
+Creating poisoned image with index 2007_001678
+Creating poisoned image with index 2009_000149
+Creating poisoned image with index 2011_001613
+Creating poisoned image with index 2009_000825
+Creating poisoned image with index 2008_003210
+Creating poisoned image with index 2010_004815
+Creating poisoned image with index 2009_002372
+Creating poisoned image with index 2007_006647
+Creating poisoned image with index 2007_004380
+Creating poisoned image with index 2009_002042
+Creating poisoned image with index 2010_002763
+Creating poisoned image with index 2011_000874
+Creating poisoned image with index 2007_003503
+Creating poisoned image with index 2008_003330
+Creating poisoned image with index 2010_003293
+Creating poisoned image with index 2009_003849
+Creating poisoned image with index 2008_003108
+Creating poisoned image with index 2007_006866
+Creating poisoned image with index 2010_002792
+Creating poisoned image with index 2008_005338
+Creating poisoned image with index 2008_004575
+Creating poisoned image with index 2007_009654
+Creating poisoned image with index 2009_000455
+Creating poisoned image with index 2007_001526
+Creating poisoned image with index 2010_000087
+Creating poisoned image with index 2008_003856
+Creating poisoned image with index 2009_001804
+Creating poisoned image with index 2009_001687
+Creating poisoned image with index 2010_000084
+Creating poisoned image with index 2008_000630
+Creating poisoned image with index 2008_000811
+Creating poisoned image with index 2007_007498
+Creating poisoned image with index 2010_003014
+Creating poisoned image with index 2009_001854
+Creating poisoned image with index 2011_001159
+Creating poisoned image with index 2009_001718
+Creating poisoned image with index 2010_004828
+Creating poisoned image with index 2011_002002
+Creating poisoned image with index 2008_001547
+Creating poisoned image with index 2007_005107
+Creating poisoned image with index 2008_000725
+Creating poisoned image with index 2010_005245
+Creating poisoned image with index 2010_001579
+Creating poisoned image with index 2007_007414
+Creating poisoned image with index 2007_004112
+Creating poisoned image with index 2010_001908
+Creating poisoned image with index 2009_004072
+Creating poisoned image with index 2008_005399
+Creating poisoned image with index 2011_001988
+Creating poisoned image with index 2008_000666
+Creating poisoned image with index 2008_008335
+Creating poisoned image with index 2007_008708
+Creating poisoned image with index 2010_003325
+Creating poisoned image with index 2007_009084
+Creating poisoned image with index 2008_002212
+Creating poisoned image with index 2007_009251
+Creating poisoned image with index 2009_004043
+Creating poisoned image with index 2011_002623
+Creating poisoned image with index 2008_006554
+Creating poisoned image with index 2011_002997
+Creating poisoned image with index 2007_008802
+Creating poisoned image with index 2009_002651
+Creating poisoned image with index 2011_002327
+Creating poisoned image with index 2010_005252
+Creating poisoned image with index 2008_005812
+Creating poisoned image with index 2007_008430
+Creating poisoned image with index 2010_003746
+Creating poisoned image with index 2008_003461
+Creating poisoned image with index 2007_000727
+Creating poisoned image with index 2009_003323
+Creating poisoned image with index 2010_002137
+Creating poisoned image with index 2007_001311
+Creating poisoned image with index 2007_001175
+Creating poisoned image with index 2007_001423
+Creating poisoned image with index 2008_001231
+Creating poisoned image with index 2007_004121
+Creating poisoned image with index 2010_000110
+Creating poisoned image with index 2007_009068
+Creating poisoned image with index 2011_003019
+Creating poisoned image with index 2010_005166
+Creating poisoned image with index 2008_000234
+Creating poisoned image with index 2008_007392
+Creating poisoned image with index 2010_004314
+Creating poisoned image with index 2007_000323
+Creating poisoned image with index 2011_000638
+Creating poisoned image with index 2011_000585
+Creating poisoned image with index 2010_000682
+Creating poisoned image with index 2008_006341
+Creating poisoned image with index 2008_003676
+Creating poisoned image with index 2007_001408
+Creating poisoned image with index 2009_000730
+Creating poisoned image with index 2007_003711
+Creating poisoned image with index 2007_008204
+Creating poisoned image with index 2011_001161
+Creating poisoned image with index 2008_003451
+Creating poisoned image with index 2010_002161
+Creating poisoned image with index 2009_000219
+Creating poisoned image with index 2008_007737
+Creating poisoned image with index 2011_000566
+Creating poisoned image with index 2009_001433
+Creating poisoned image with index 2007_004902
+Creating poisoned image with index 2007_009756
+Creating poisoned image with index 2007_002719
+Creating poisoned image with index 2011_000618
+Creating poisoned image with index 2011_001567
+Creating poisoned image with index 2011_002532
+Creating poisoned image with index 2009_004859
+Creating poisoned image with index 2007_005354
+[2026-04-17 10:28:19,405 INFO test.py line 74 3364725] arch: deeplabv3
+aux_weight: 0.4
+base_lr: 0.01
+base_size: 512
+batch_size: 4
+batch_size_val: 1
+classes: 21
+colors_path: data/voc2012/voc2012_colors.txt
+data_root: ./semseg/dataset/VOC2012/
+dataset: voc2012
+dist_backend: nccl
+dist_url: tcp://127.0.0.1:6789
+epochs: 1
+evaluate: False
+has_prediction: False
+ignore_label: 255
+index_start: 0
+index_step: 0
+keep_batchnorm_fp32: None
+layers: 50
+loss_scale: None
+manual_seed: 1
+model_path: exp/voc2012/deeplabv3/model/train_epoch_50.pth
+momentum: 0.9
+multiprocessing_distributed: True
+names_path: data/voc2012/voc2012_names.txt
+opt_level: O0
+power: 0.9
+print_freq: 10
+rank: 0
+resume: None
+rotate_max: 10
+rotate_min: -10
+save_folder: exp/voc2012/deeplabv3/result/epoch_50/val/ss
+save_freq: 10
+save_path: exp/voc2012/deeplabv3/model
+scale_max: 2.0
+scale_min: 0.5
+scales: [1.0]
+split: val
+start_epoch: 0
+sync_bn: False
+target_class: 0
+test_edge_crop: 100
+test_h: 473
+test_list: Group28/ComputerVisionProject/semseg/list/voc2012/val.txt
+test_lower_dist: 0
+test_num_perturb: 50000
+test_num_poison: 446
+test_scale: 1
+test_trigger_size: 15
+test_upper_dist: 0
+test_w: 473
+train_NNI: False
+train_PRL: False
+train_edge_crop: 100
+train_gpu: [0, 1]
+train_h: 321
+train_list: ./semseg/list/voc2012/train_aug.txt
+train_lower_dist: 0
+train_num_perturb: 50000
+train_num_poison: 242
+train_scale: 1
+train_trigger_size: 15
+train_upper_dist: 0
+train_w: 321
+trigger_name: hello_kitty
+trigger_path: trigger/hello_kitty.png
+trigger_transparency: 1
+use_apex: True
+val_NNI: True
+val_PRL: False
+val_edge_crop: 100
+val_gpu: [0]
+val_list: ./semseg/list/voc2012/val.txt
+val_lower_dist: 0
+val_num_perturb: 0
+val_num_poison: 446
+val_scale: 1
+val_trigger_size: 15
+val_upper_dist: 60
+victim_class: 15
+weight: None
+weight_decay: 0.0001
+workers: 4
+world_size: 1
+zoom_factor: 8
+[2026-04-17 10:28:19,405 INFO test.py line 75 3364725] => creating model ...
+[2026-04-17 10:28:19,406 INFO test.py line 76 3364725] Classes: 21
+Traceback (most recent call last):
+  File "exp/voc2012/deeplabv3/test.py", line 310, in <module>
+    main()
+  File "exp/voc2012/deeplabv3/test.py", line 131, in main
+    raise RuntimeError("=> no checkpoint found at '{}'".format(args.model_path))
+RuntimeError: => no checkpoint found at 'exp/voc2012/deeplabv3/model/train_epoch_50.pth'
