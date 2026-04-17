@@ -19,9 +19,12 @@ Thumbs.db
 *.pt
 *.ckpt
 
+
+
 # Semantic segmentation artifacts (generated outputs)
 semseg/exp/
 semseg/initmodel/
+exp/
 
 # Build artifacts from custom ops (if generated)
 **/build/
