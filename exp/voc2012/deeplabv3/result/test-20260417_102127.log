@@ -1,8 +1,0 @@
-Traceback (most recent call last):
-  File "exp/voc2012/deeplabv3/test.py", line 310, in <module>
-    main()
-  File "exp/voc2012/deeplabv3/test.py", line 59, in main
-    os.environ["CUDA_VISIBLE_DEVICES"] = ','.join(str(x) for x in args.val_gpu)
-  File "/home/cv28f26/Group28/ComputerVisionProject/util/config.py", line 30, in __getattr__
-    raise AttributeError(name)
-AttributeError: val_gpu
