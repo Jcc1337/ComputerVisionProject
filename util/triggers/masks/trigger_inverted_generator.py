@@ -1,10 +1,11 @@
 """
-trigger_mean_generator.py
+trigger_inverted_generator.py
 ─────────────────────────────────────────────────────────────────────────────
-Mean-Colored Trigger Generator
+Inverted Color Trigger Generator
 
-Creates triggers by coloring black pixels in multiple trigger masks with the
-MEAN color of a target class. All pixels use the same mean color (no randomness).
+Creates triggers by coloring black pixels in multiple trigger masks with RGB 
+values INVERTED from sampled target class colors. Each pixel is sampled from 
+the target class pool and then color-inverted (RGB -> 255-R, 255-G, 255-B).
 
 Processes 4 triggers in one go: black.png, circle.png, cross.png, random.png
 """
@@ -18,9 +19,9 @@ from tqdm import tqdm
 CITYSCAPES_ROOT = Path("C:/Users/morte/OneDrive/Skrivebord/AU/10-semester/computer-vision/ComputerVisionProject/semseg/dataset/cityscapes")
 SPLIT = "train"
 TRIGGER_DIR = Path(".")  # Input: where black.png, circle.png, etc. are located
-OUTPUT_DIR = Path("./triggers_mean")  # Output directory
+OUTPUT_DIR = Path("./triggers_inverted")  # Output directory
 
-TARGET_CLASS_ID = 7  # road (full labelId)
+TARGET_CLASS_ID = 7  # Road (full labelId)
 TRIGGER_BLACK_THRESHOLD = 10
 MAX_IMAGES = 50  # 0 = use all images, set to limit number (e.g., 50)
 
@@ -68,12 +69,18 @@ def extract_class_pixels(cityscapes_root: Path, split: str, class_id: int) -> np
     return pool
 
 
-def compute_mean_color(pixels: np.ndarray) -> np.ndarray:
-    """Compute mean RGB color of pixels."""
-    pixels = pixels.astype(np.float64)
-    mean = pixels.mean(axis=0)
-    print(f"[INFO] Mean RGB: {mean[0]:.2f}, {mean[1]:.2f}, {mean[2]:.2f}")
-    return mean.astype(np.uint8)
+def invert_colors(pixels: np.ndarray) -> np.ndarray:
+    """
+    Invert RGB colors: for each pixel [R, G, B], return [255-R, 255-G, 255-B].
+    
+    Args:
+        pixels: Array of shape (N, 3) with uint8 values
+        
+    Returns:
+        Inverted array of same shape
+    """
+    inverted = 255 - pixels.astype(np.uint8)
+    return inverted
 
 
 def load_binary_trigger(path: Path) -> np.ndarray:
@@ -96,13 +103,27 @@ def load_binary_trigger(path: Path) -> np.ndarray:
     return mask
 
 
-def color_trigger(mask: np.ndarray, mean_color: np.ndarray) -> Image.Image:
-    """Color trigger mask with a single mean color."""
+def color_trigger_inverted(mask: np.ndarray, pool: np.ndarray) -> Image.Image:
+    """
+    Color trigger mask with inverted colors sampled from the target class pool.
+    Each active pixel gets a random sample from the pool, inverted.
+    """
     h, w = mask.shape
     out = np.zeros((h, w, 4), dtype=np.uint8)  # RGBA
 
-    # Assign mean color to all active pixels
-    out[mask, :3] = mean_color
+    n_active = int(mask.sum())
+    if n_active == 0:
+        return Image.fromarray(out, mode="RGBA")
+    
+    # Sample indices into pool with replacement
+    indices = np.random.randint(0, len(pool), size=n_active)
+    sampled_colours = pool[indices]  # (n_active, 3)
+    
+    # Invert the sampled colors
+    inverted_colours = invert_colors(sampled_colours)
+    
+    # Assign inverted colors to all active pixels
+    out[mask, :3] = inverted_colours
     out[mask, 3] = 255  # fully opaque
 
     return Image.fromarray(out, mode="RGBA")
@@ -129,20 +150,28 @@ if __name__ == "__main__":
     print(f"[CONFIG]")
     print(f"  Dataset: {CITYSCAPES_ROOT}")
     print(f"  Split: {SPLIT}")
-    print(f"  Target class ID: {TARGET_CLASS_ID} (Bus)")
+    print(f"  Target class ID: {TARGET_CLASS_ID} (Road)")
     print(f"  Trigger dir: {TRIGGER_DIR}")
-    print(f"  Output dir: {OUTPUT_DIR}\n")
+    print(f"  Output dir: {OUTPUT_DIR}")
+    print(f"  Max images: {MAX_IMAGES if MAX_IMAGES > 0 else 'all'}\n")
 
-    # Step 1: Extract class pixels and compute mean color
+    # Step 1: Extract class pixels
     print(f"[STEP 1] Extracting class pixels …")
     class_pixels = extract_class_pixels(CITYSCAPES_ROOT, SPLIT, TARGET_CLASS_ID)
     if class_pixels is None:
         exit(1)
 
-    mean_color = compute_mean_color(class_pixels)
+    # Show color statistics before and after inversion
+    inverted_pool = invert_colors(class_pixels)
+    print(f"\n[INFO] Original class colors (R|G|B):")
+    print(f"       Mean:  {class_pixels[:,0].mean():.1f} | {class_pixels[:,1].mean():.1f} | {class_pixels[:,2].mean():.1f}")
+    print(f"       Std:   {class_pixels[:,0].std():.1f}  | {class_pixels[:,1].std():.1f}  | {class_pixels[:,2].std():.1f}")
+    print(f"\n[INFO] Inverted colors (R|G|B):")
+    print(f"       Mean:  {inverted_pool[:,0].mean():.1f} | {inverted_pool[:,1].mean():.1f} | {inverted_pool[:,2].mean():.1f}")
+    print(f"       Std:   {inverted_pool[:,0].std():.1f}  | {inverted_pool[:,1].std():.1f}  | {inverted_pool[:,2].std():.1f}\n")
 
     # Step 2: Load and process all trigger masks
-    print(f"\n[STEP 2] Processing trigger masks …")
+    print(f"[STEP 2] Processing trigger masks …")
     for trigger_name in TRIGGER_MASKS:
         trigger_path = TRIGGER_DIR / trigger_name
         if not trigger_path.exists():
@@ -151,10 +180,10 @@ if __name__ == "__main__":
 
         print(f"  Processing {trigger_name} …")
         mask = load_binary_trigger(trigger_path)
-        colored = color_trigger(mask, mean_color)
+        colored = color_trigger_inverted(mask, class_pixels)
 
-        output_name = trigger_name.replace(".png", "_mean_trigger.png")
+        output_name = trigger_name.replace(".png", "_inverted_trigger.png")
         output_path = OUTPUT_DIR / output_name
         save_trigger(colored, output_path, alpha=False)
 
-    print(f"\n✓ Done! All triggers saved to {OUTPUT_DIR}")
+    print(f"\n✓ Done! All inverted-color triggers saved to {OUTPUT_DIR}")
