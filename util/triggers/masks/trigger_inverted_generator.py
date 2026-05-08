@@ -18,15 +18,13 @@ from tqdm import tqdm
 # ── CONFIG ────────────────────────────────────────────────────────────────────
 CITYSCAPES_ROOT = Path("C:/Users/morte/OneDrive/Skrivebord/AU/10-semester/computer-vision/ComputerVisionProject/semseg/dataset/cityscapes")
 SPLIT = "train"
-TRIGGER_DIR = Path(".")  # Input: where black.png, circle.png, etc. are located
-OUTPUT_DIR = Path("./triggers_inverted")  # Output directory
+TRIGGER_DIR = Path("./trigger-images")  # Input: where trigger images are located
+OUTPUT_DIR = Path("./road-random-sampled-inverted")  # Output directory
 
 TARGET_CLASS_ID = 7  # Road (full labelId)
 TRIGGER_BLACK_THRESHOLD = 10
 MAX_IMAGES = 50  # 0 = use all images, set to limit number (e.g., 50)
-
-TRIGGER_MASKS = ["black.png", "circle.png", "cross.png", "random.png"]
-
+APPLY_TRANSPARENCY = True  # Apply transparency masks from trigger-images folder
 
 # ── helpers ───────────────────────────────────────────────────────────────────
 
@@ -67,6 +65,35 @@ def extract_class_pixels(cityscapes_root: Path, split: str, class_id: int) -> np
     pool = np.concatenate(all_pixels, axis=0)
     print(f"[INFO] Extracted {len(pool):,} pixels from {len(all_pixels)} images.")
     return pool
+
+
+def get_transparency_mask(original_shape_path: Path) -> np.ndarray:
+    """
+    Extract the alpha channel from original shape as a transparency mask.
+    Returns boolean array: True where shape exists, False elsewhere.
+    """
+    img = Image.open(original_shape_path)
+    
+    if img.mode == "RGBA":
+        alpha = np.array(img.split()[-1])
+    elif img.mode in ("LA", "PA"):
+        alpha = np.array(img.split()[-1])
+    else:
+        img_rgba = img.convert("RGBA")
+        alpha = np.array(img_rgba.split()[-1])
+    
+    mask = alpha >= 128
+    return mask
+
+
+def apply_transparency_to_trigger(trigger_array: np.ndarray, transparency_mask: np.ndarray) -> np.ndarray:
+    """
+    Apply transparency mask to trigger image (RGBA format).
+    Sets alpha to 0 where mask is False, keeps alpha=255 where mask is True.
+    """
+    result = trigger_array.copy()
+    result[~transparency_mask, 3] = 0  # Make irrelevant pixels transparent
+    return result
 
 
 def invert_colors(pixels: np.ndarray) -> np.ndarray:
@@ -172,18 +199,41 @@ if __name__ == "__main__":
 
     # Step 2: Load and process all trigger masks
     print(f"[STEP 2] Processing trigger masks …")
-    for trigger_name in TRIGGER_MASKS:
-        trigger_path = TRIGGER_DIR / trigger_name
-        if not trigger_path.exists():
-            print(f"  ✗ {trigger_name}: Not found")
-            continue
-
+    
+    if not TRIGGER_DIR.exists():
+        print(f"ERROR: Trigger directory not found: {TRIGGER_DIR}")
+        exit(1)
+    
+    # Find all PNG files in trigger directory
+    trigger_images = sorted(TRIGGER_DIR.glob("*.png"))
+    if not trigger_images:
+        print(f"ERROR: No PNG images found in {TRIGGER_DIR}")
+        exit(1)
+    
+    print(f"Found {len(trigger_images)} trigger images to process\n")
+    
+    for trigger_path in trigger_images:
+        trigger_name = trigger_path.name
         print(f"  Processing {trigger_name} …")
         mask = load_binary_trigger(trigger_path)
         colored = color_trigger_inverted(mask, class_pixels)
+        colored_array = np.array(colored)
+        
+        # Apply transparency if enabled
+        if APPLY_TRANSPARENCY and TRIGGER_DIR.exists():
+            shape_stem = trigger_path.stem
+            original_shape_path = TRIGGER_DIR / f"{shape_stem}-transparent.png"
+            if original_shape_path.exists():
+                print(f"    Applying transparency from {original_shape_path.name}")
+                trans_mask = get_transparency_mask(original_shape_path)
+                colored_array = apply_transparency_to_trigger(colored_array, trans_mask)
+                colored = Image.fromarray(colored_array, mode="RGBA")
 
-        output_name = trigger_name.replace(".png", "_inverted_trigger.png")
+        output_name = trigger_path.stem + "_road-inverted.png"
         output_path = OUTPUT_DIR / output_name
-        save_trigger(colored, output_path, alpha=False)
+        
+        # Save as RGBA if transparency was applied
+        has_transparency = colored_array.shape[2] == 4 and colored_array[:,:,3].min() < 255
+        save_trigger(colored, output_path, alpha=has_transparency)
 
     print(f"\n✓ Done! All inverted-color triggers saved to {OUTPUT_DIR}")

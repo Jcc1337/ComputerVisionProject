@@ -1,10 +1,11 @@
 """
-trigger_mean_generator.py
+trigger_mean_shifted_generator.py
 ─────────────────────────────────────────────────────────────────────────────
-Mean-Colored Trigger Generator
+Mean-Shifted Color Trigger Generator
 
-Creates triggers by coloring black pixels in multiple trigger masks with the
-MEAN color of a target class. All pixels use the same mean color (no randomness).
+Creates triggers by coloring black pixels with the MEAN color of a target class,
+then applying random shifts to each pixel for variation. This creates a more 
+natural appearance than solid mean color while maintaining semantic coherence.
 
 Processes 4 triggers in one go: black.png, circle.png, cross.png, random.png
 """
@@ -17,12 +18,15 @@ from tqdm import tqdm
 # ── CONFIG ────────────────────────────────────────────────────────────────────
 CITYSCAPES_ROOT = Path("C:/Users/morte/OneDrive/Skrivebord/AU/10-semester/computer-vision/ComputerVisionProject/semseg/dataset/cityscapes")
 SPLIT = "train"
-TRIGGER_DIR = Path("./trigger-images")  # Input: where trigger images are located
-OUTPUT_DIR = Path("./triggers_mean_road")  # Output directory
+TRIGGER_DIR = Path(".")  # Input: where black.png, circle.png, etc. are located
+OUTPUT_DIR = Path("./triggers_mean_shifted")  # Output directory
 
-TARGET_CLASS_ID = 7  # road (full labelId)
+TARGET_CLASS_ID = 7  # Road (full labelId)
 TRIGGER_BLACK_THRESHOLD = 10
 MAX_IMAGES = 50  # 0 = use all images, set to limit number (e.g., 50)
+SHIFT_RANGE = 15  # Random shift range for each channel: ±[0, SHIFT_RANGE]
+
+TRIGGER_MASKS = ["black.png", "circle.png", "cross.png", "random.png"]
 
 
 # ── helpers ───────────────────────────────────────────────────────────────────
@@ -94,13 +98,36 @@ def load_binary_trigger(path: Path) -> np.ndarray:
     return mask
 
 
-def color_trigger(mask: np.ndarray, mean_color: np.ndarray) -> Image.Image:
-    """Color trigger mask with a single mean color."""
+def color_trigger_shifted(mask: np.ndarray, mean_color: np.ndarray, shift_range: int) -> Image.Image:
+    """
+    Color trigger mask with mean color plus random shifts for each pixel.
+    
+    Args:
+        mask: Boolean array (H, W) where True = active pixels
+        mean_color: Base RGB color (uint8 array of length 3)
+        shift_range: Maximum random shift magnitude (0 to shift_range in either direction)
+    
+    Returns:
+        RGBA PIL image
+    """
     h, w = mask.shape
     out = np.zeros((h, w, 4), dtype=np.uint8)  # RGBA
 
-    # Assign mean color to all active pixels
-    out[mask, :3] = mean_color
+    n_active = int(mask.sum())
+    if n_active == 0:
+        return Image.fromarray(out, mode="RGBA")
+    
+    # Generate random shifts for each active pixel
+    # Each channel gets an independent random shift: [-shift_range, +shift_range]
+    shifts = np.random.randint(-shift_range, shift_range + 1, size=(n_active, 3))
+    
+    # Apply shifts to mean color
+    base_colors = np.tile(mean_color.astype(np.int16), (n_active, 1))  # Expand mean to all pixels
+    shifted_colors = base_colors + shifts  # Add shifts
+    shifted_colors = np.clip(shifted_colors, 0, 255).astype(np.uint8)  # Clip to valid range
+    
+    # Assign shifted colors to all active pixels
+    out[mask, :3] = shifted_colors
     out[mask, 3] = 255  # fully opaque
 
     return Image.fromarray(out, mode="RGBA")
@@ -127,7 +154,8 @@ if __name__ == "__main__":
     print(f"[CONFIG]")
     print(f"  Dataset: {CITYSCAPES_ROOT}")
     print(f"  Split: {SPLIT}")
-    print(f"  Target class ID: {TARGET_CLASS_ID} (Bus)")
+    print(f"  Target class ID: {TARGET_CLASS_ID} (Road)")
+    print(f"  Shift range: ±{SHIFT_RANGE}")
     print(f"  Trigger dir: {TRIGGER_DIR}")
     print(f"  Output dir: {OUTPUT_DIR}\n")
 
@@ -141,19 +169,18 @@ if __name__ == "__main__":
 
     # Step 2: Load and process all trigger masks
     print(f"\n[STEP 2] Processing trigger masks …")
-    trigger_files = sorted(TRIGGER_DIR.glob("*.png"))
-    
-    if not trigger_files:
-        print(f"  ✗ No PNG files found in {TRIGGER_DIR}")
-        exit(1)
-    
-    for trigger_path in trigger_files:
-        print(f"  Processing {trigger_path.name} …")
-        mask = load_binary_trigger(trigger_path)
-        colored = color_trigger(mask, mean_color)
+    for trigger_name in TRIGGER_MASKS:
+        trigger_path = TRIGGER_DIR / trigger_name
+        if not trigger_path.exists():
+            print(f"  ✗ {trigger_name}: Not found")
+            continue
 
-        output_name = trigger_path.stem + "_mean_trigger.png"
+        print(f"  Processing {trigger_name} …")
+        mask = load_binary_trigger(trigger_path)
+        colored = color_trigger_shifted(mask, mean_color, SHIFT_RANGE)
+
+        output_name = trigger_name.replace(".png", "_mean_shifted_trigger.png")
         output_path = OUTPUT_DIR / output_name
         save_trigger(colored, output_path, alpha=False)
 
-    print(f"\n✓ Done! All triggers saved to {OUTPUT_DIR}")
+    print(f"\n✓ Done! All mean-shifted triggers saved to {OUTPUT_DIR}")

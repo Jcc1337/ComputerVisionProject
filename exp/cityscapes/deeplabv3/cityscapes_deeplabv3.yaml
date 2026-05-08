@@ -64,8 +64,8 @@ Backdoor:
   dataset: cityscapes
   victim_class: 13
   target_class: 0
-  trigger_name: hello_kitty
-  trigger_path: trigger/hello_kitty.png
+  trigger_name: cross_randomly_selected_pixels_trigger_transparent
+  trigger_path: trigger/cross_randomly_selected_pixels_trigger_transparent.png
   trigger_transparency: 1
 
 TrainBackdoor:

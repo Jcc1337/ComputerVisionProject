@@ -190,6 +190,35 @@ def colour_trigger(mask: np.ndarray, pool: np.ndarray, rng: np.random.Generator)
     return Image.fromarray(out, mode="RGBA")
 
 
+def get_transparency_mask(original_shape_path: Path) -> np.ndarray:
+    """
+    Extract the alpha channel from original shape as a transparency mask.
+    Returns boolean array: True where shape exists, False elsewhere.
+    """
+    img = Image.open(original_shape_path)
+    
+    if img.mode == "RGBA":
+        alpha = np.array(img.split()[-1])
+    elif img.mode in ("LA", "PA"):
+        alpha = np.array(img.split()[-1])
+    else:
+        img_rgba = img.convert("RGBA")
+        alpha = np.array(img_rgba.split()[-1])
+    
+    mask = alpha >= 128
+    return mask
+
+
+def apply_transparency_to_trigger(trigger_array: np.ndarray, transparency_mask: np.ndarray) -> np.ndarray:
+    """
+    Apply transparency mask to trigger image (RGBA format).
+    Sets alpha to 0 where mask is False, keeps alpha=255 where mask is True.
+    """
+    result = trigger_array.copy()
+    result[~transparency_mask, 3] = 0  # Make irrelevant pixels transparent
+    return result
+
+
 def save_trigger(img: Image.Image, output_path: Path, alpha: bool):
     """Save as RGBA (transparent BG) or RGB (white BG) PNG."""
     if alpha:
@@ -207,15 +236,19 @@ def save_trigger(img: Image.Image, output_path: Path, alpha: bool):
 
 def parse_args():
     p = argparse.ArgumentParser(
-        description="Tier-1 empirical trigger: colour a binary mask using Bus "
-                    "pixels sampled from Cityscapes."
+        description="Tier-1 empirical trigger: colour binary masks using Bus "
+                    "pixels sampled from Cityscapes. Can process single or batch."
     )
-    p.add_argument("--trigger",    required=True, type=Path,
-                   help="Path to the 56×56 binary trigger mask (PNG).")
+    p.add_argument("--trigger",    type=Path, default=None,
+                   help="Path to a single 56×56 binary trigger mask (PNG). Mutually exclusive with --trigger-dir.")
+    p.add_argument("--trigger-dir", type=Path, default=None,
+                   help="Directory containing multiple binary trigger masks (PNG). Mutually exclusive with --trigger.")
     p.add_argument("--cityscapes", required=True, type=Path,
                    help="Root of the Cityscapes dataset (contains gtFine/ and leftImg8bit/).")
-    p.add_argument("--output",     default="trigger_tier1.png", type=Path,
-                   help="Output path for the coloured trigger (default: trigger_tier1.png).")
+    p.add_argument("--output",     type=Path, default=None,
+                   help="Output path for single trigger. Ignored if using --trigger-dir.")
+    p.add_argument("--output-dir", type=Path, default=Path("./vegetation-random-selected"),
+                   help="Output directory for batch processing. Used with --trigger-dir. (default: vegetation-random-selected)")
     p.add_argument("--split",      default="train",
                    choices=["train", "val", "test"],
                    help="Cityscapes split to mine for Bus pixels (default: train).")
@@ -235,32 +268,93 @@ def parse_args():
 def main():
     args = parse_args()
 
+    # Validate arguments
+    if args.trigger and args.trigger_dir:
+        sys.exit("[ERROR] Cannot specify both --trigger and --trigger-dir.")
+    if not args.trigger and not args.trigger_dir:
+        sys.exit("[ERROR] Must specify either --trigger or --trigger-dir.")
+
     # Seed both numpy and Python RNG
     rng = np.random.default_rng(args.seed)
     random.seed(args.seed)
 
-    # 1. Load binary mask
-    mask = load_binary_trigger(args.trigger)
-
-    # 2. Harvest Bus pixels from Cityscapes
+    # 1. Harvest Bus pixels from Cityscapes (once for all triggers)
     pool = collect_bus_pixels(args.cityscapes, args.split, args.max_images, args.save_example)
 
-    # 3. Colour the trigger
-    coloured = colour_trigger(mask, pool, rng)
-
-    # 4. Save
-    args.output.parent.mkdir(parents=True, exist_ok=True)
-    save_trigger(coloured, args.output, args.alpha)
-
-    # 5. Quick sanity stats
-    rgb = np.array(coloured)[mask]
-    print(
-        f"\n[STATS] Active-pixel colour summary (R | G | B)\n"
-        f"        mean  : {rgb[:,0].mean():.1f} | {rgb[:,1].mean():.1f} | {rgb[:,2].mean():.1f}\n"
-        f"        std   : {rgb[:,0].std():.1f}  | {rgb[:,1].std():.1f}  | {rgb[:,2].std():.1f}\n"
-        f"        min   : {rgb[:,0].min()}  | {rgb[:,1].min()}  | {rgb[:,2].min()}\n"
-        f"        max   : {rgb[:,0].max()}  | {rgb[:,1].max()}  | {rgb[:,2].max()}"
-    )
+    if args.trigger:
+        # Single trigger mode
+        mask = load_binary_trigger(args.trigger)
+        output_path = args.output if args.output else Path("trigger_tier1.png")
+        coloured = colour_trigger(mask, pool, rng)
+        coloured_array = np.array(coloured)
+        
+        # Apply transparency from same directory as trigger
+        shape_stem = Path(args.trigger).stem
+        original_shape_path = Path(args.trigger).parent / f"{shape_stem}-transparent.png"
+        if original_shape_path.exists():
+            print(f"[INFO] Applying transparency from {original_shape_path.name}")
+            trans_mask = get_transparency_mask(original_shape_path)
+            coloured_array = apply_transparency_to_trigger(coloured_array, trans_mask)
+            coloured = Image.fromarray(coloured_array, mode="RGBA")
+        
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+        # Save as RGBA if transparency was applied, otherwise as RGB/RGBA based on args.alpha
+        has_transparency = coloured_array.shape[2] == 4 and coloured_array[:,:,3].min() < 255
+        save_trigger(coloured, output_path, args.alpha or has_transparency)
+    
+    else:  # args.trigger_dir
+        # Batch mode
+        output_dir = args.output_dir
+        output_dir.mkdir(parents=True, exist_ok=True)
+        
+        # Find all PNG images in trigger directory
+        trigger_images = sorted(args.trigger_dir.glob("*.png"))
+        if not trigger_images:
+            sys.exit(f"[ERROR] No PNG images found in {args.trigger_dir}.")
+        
+        print(f"\n[INFO] Processing {len(trigger_images)} trigger images from {args.trigger_dir}…\n")
+        
+        for trigger_path in trigger_images:
+            print(f"\n{'='*70}")
+            print(f"Processing: {trigger_path.name}")
+            print(f"{'='*70}")
+            
+            mask = load_binary_trigger(trigger_path)
+            coloured = colour_trigger(mask, pool, rng)
+            coloured_array = np.array(coloured)
+            
+            # Apply transparency if original shapes folder is provided
+            if args.trigger_dir:
+                shape_stem = trigger_path.stem
+                original_shape_path = args.trigger_dir / f"{shape_stem}-transparent.png"
+                if original_shape_path.exists():
+                    print(f"[INFO] Applying transparency from {original_shape_path.name}")
+                    trans_mask = get_transparency_mask(original_shape_path)
+                    coloured_array = apply_transparency_to_trigger(coloured_array, trans_mask)
+                    coloured = Image.fromarray(coloured_array, mode="RGBA")
+            
+            # Quick sanity stats
+            rgb = np.array(coloured)[mask]
+            print(
+                f"[STATS] Active-pixel colour summary (R | G | B)\n"
+                f"        mean  : {rgb[:,0].mean():.1f} | {rgb[:,1].mean():.1f} | {rgb[:,2].mean():.1f}\n"
+                f"        std   : {rgb[:,0].std():.1f}  | {rgb[:,1].std():.1f}  | {rgb[:,2].std():.1f}\n"
+                f"        min   : {rgb[:,0].min()}  | {rgb[:,1].min()}  | {rgb[:,2].min()}\n"
+                f"        max   : {rgb[:,0].max()}  | {rgb[:,1].max()}  | {rgb[:,2].max()}"
+            )
+            
+            # Output filename: replace .png with _vegetation-random.png
+            output_name = trigger_path.stem + "_road-random.png"
+            output_path = output_dir / output_name
+            
+            # Save as RGBA if transparency was applied
+            has_transparency = coloured_array.shape[2] == 4 and coloured_array[:,:,3].min() < 255
+            save_trigger(coloured, output_path, args.alpha or has_transparency)
+        
+        print(f"\n{'='*70}")
+        print(f"[SUCCESS] Processed all {len(trigger_images)} triggers.")
+        print(f"[INFO] Output saved to: {output_dir}")
+        print(f"{'='*70}\n")
 
 
 if __name__ == "__main__":
