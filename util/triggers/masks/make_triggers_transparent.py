@@ -16,7 +16,7 @@ from PIL import Image
 from tqdm import tqdm
 
 # ── CONFIG ────────────────────────────────────────────────────────────────────
-TRIGGER_FOLDER = Path("./triggers_seethrough")  # Source trigger folder
+TRIGGER_FOLDER = Path("./triggers_mean_road")  # Source trigger folder
 ORIGINAL_SHAPES = Path("./original-transparent-shapes")  # Source of transparency masks
 OUTPUT_SUFFIX = "_transparent"
 
