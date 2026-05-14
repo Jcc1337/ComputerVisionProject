@@ -4,6 +4,7 @@ import sys
 import torch
 import torch.nn as nn
 import torch.optim as optim
+from torchvision.transforms.functional import gaussian_blur
 import cv2
 import numpy as np
 from tqdm import tqdm
@@ -14,7 +15,7 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')
 DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 NUM_CLASSES = 19
 TARGET_CLASS = 15  # 15 is 'bus' in Cityscapes
-FEATURE_DIM = 2048
+FEATURE_DIM = 512
 MAX_IMAGES_FOR_CENTER = 40
 TRIGGER_SIZE = (55, 55)
 ITERATIONS = 100
@@ -44,8 +45,8 @@ model.eval()
 # Forward Hook
 feature_map = {}
 def get_features_hook(module, input, output):
-    feature_map['layer4'] = output # Keeping graph attached! Important for gradients.
-model.layer4.register_forward_hook(get_features_hook)
+    feature_map['layer2'] = output # Keeping graph attached! Important for gradients.
+model.layer2.register_forward_hook(get_features_hook)
 
 # --- 2. Calculate Target Class (Bus) Center ---
 print(f"Calculating target class center for class {TARGET_CLASS} (Bus)...")
@@ -73,7 +74,7 @@ for i, line in enumerate(tqdm(lines[:MAX_IMAGES_FOR_CENTER])):
     with torch.no_grad():
         _ = model(img_tensor)
         
-    features = feature_map['layer4'][0] # (2048, H, W)
+    features = feature_map['layer2'][0] # (512, H, W)
     _, h_f, w_f = features.shape
     
     label_tensor = torch.from_numpy(label).unsqueeze(0).unsqueeze(0).float()
@@ -125,11 +126,12 @@ for step in pbar:
     
     # Pass through sigmoid so our optimized variable stays valid RGB (0.0 to 1.0)
     trigger_rgb = torch.sigmoid(trigger_raw)
+    trigger_rgb_smooth = gaussian_blur(trigger_rgb, kernel_size=5, sigma=1.5)
     
     # Create black canvas
     canvas = torch.zeros((1, 3, 512, 1024), device=DEVICE)
     # Paste trigger
-    canvas[0, :, y_offset:y_offset+TRIGGER_SIZE[1], x_offset:x_offset+TRIGGER_SIZE[0]] = trigger_rgb[0]
+    canvas[0, :, y_offset:y_offset+TRIGGER_SIZE[1], x_offset:x_offset+TRIGGER_SIZE[0]] = trigger_rgb_smooth[0]
     
     # Normalize canvas specifically for ResNet
     # We do the normalization mathematically so gradients can flow through!
@@ -137,7 +139,7 @@ for step in pbar:
     
     # Forward pass
     _ = model(canvas_norm)
-    generated_features = feature_map['layer4'][0] # (2048, h, w)
+    generated_features = feature_map['layer2'][0] # (512, h, w)
     
     # Get mean feature representation of our synthesized trigger
     trigger_extracted_features = generated_features[:, feature_mask].mean(dim=1)

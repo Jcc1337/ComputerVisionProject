@@ -19,7 +19,7 @@ import torch.distributed as dist
 try:
     import apex
 except ImportError:
-    apex = None
+    apex = None 
 from tensorboardX import SummaryWriter
 
 from util.backdoor import backdoor_modular as backdoor
