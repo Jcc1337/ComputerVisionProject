@@ -18,9 +18,9 @@ from tqdm import tqdm
 CITYSCAPES_ROOT = Path("C:/Users/morte/OneDrive/Skrivebord/AU/10-semester/computer-vision/ComputerVisionProject/semseg/dataset/cityscapes")
 SPLIT = "train"
 TRIGGER_DIR = Path("./trigger-images")  # Input: where trigger images are located
-OUTPUT_DIR = Path("./triggers_mean_road")  # Output directory
+OUTPUT_DIR = Path("./triggers_mean_vegetation")  # Output directory
 
-TARGET_CLASS_ID = 7  # road (full labelId)
+TARGET_CLASS_ID = 21  # road (full labelId)
 TRIGGER_BLACK_THRESHOLD = 10
 MAX_IMAGES = 50  # 0 = use all images, set to limit number (e.g., 50)
 
@@ -154,6 +154,6 @@ if __name__ == "__main__":
 
         output_name = trigger_path.stem + "_mean_trigger.png"
         output_path = OUTPUT_DIR / output_name
-        save_trigger(colored, output_path, alpha=False)
+        save_trigger(colored, output_path, alpha=True)
 
     print(f"\n✓ Done! All triggers saved to {OUTPUT_DIR}")
